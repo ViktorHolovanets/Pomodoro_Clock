@@ -10,9 +10,8 @@
     <Border CornerRadius="5" Background="#FF17151D" Padding="15,50,15,15">
         <DockPanel>
             <Border DockPanel.Dock="Bottom" BorderThickness="1" BorderBrush="White" CornerRadius="5">
-                <Button  Click="Button_Click">Закрити</Button>
+                <Button BorderThickness="0"  Click="Button_Click">Закрити</Button>
             </Border>
-            
             <Grid DockPanel.Dock="Top" >
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
