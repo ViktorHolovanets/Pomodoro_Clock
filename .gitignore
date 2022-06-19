@@ -18,3 +18,8 @@ Pomodoro_Clock/Pomodoro_Clock/obj/Debug/net6.0-windows/Pomodoro_Clock.assets.cac
 *.v2
 Pomodoro_Clock/.vs/Pomodoro_Clock/v17/.suo
 *.v2
+*.vsidx
+*.json
+*.v2
+*.cache
+*.v1
