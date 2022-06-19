@@ -13,14 +13,14 @@
             <Border x:Name="brdWorkArea" CornerRadius="15" Background="#FFE84E4E" DockPanel.Dock="Top">
                 <DockPanel>
                     <WrapPanel DockPanel.Dock="Top" >
-                        <Button x:Name="btnClose" FontSize="18" Click="btnClose_Click">✖</Button>
-                        <Button x:Name="btnSettings" FontSize="18" Click="btnSettings_Click">⚙</Button>
+                        <Button x:Name="btnClose" FontSize="18" Click="btnClose_Click" ToolTip="Close">✖</Button>
+                        <Button x:Name="btnSettings" FontSize="18" Click="btnSettings_Click" ToolTip="Settings">⚙</Button>
                     </WrapPanel>
                     <StackPanel >
                         <TextBox x:Name="tbTime" Background="Transparent" HorizontalAlignment="Center" FontSize="85" BorderBrush="Transparent" IsReadOnly="True"></TextBox>
                         <WrapPanel HorizontalAlignment="Center">
-                            <Button x:Name="btnStartPomodoro" FontSize="25" BorderThickness="3" BorderBrush="White" FontFamily="Gabriola" Width="139" Click="btnStartPomodoro_Click" Content="Start"></Button>
-                            <Button x:Name="btnStopPomodoro" FontSize="25" BorderThickness="3" BorderBrush="White" FontFamily="Gabriola" Width="139" Click="btnStopPomodoro_Click" IsEnabled="false">Stop</Button>
+                            <Button x:Name="btnStartPomodoro" FontSize="25" BorderThickness="0" Click="btnStartPomodoro_Click" Content="▶" ToolTip="Start"></Button>
+                            <Button x:Name="btnStopPomodoro" FontSize="25" BorderThickness="0"  Click="btnStopPomodoro_Click" IsEnabled="false" ToolTip="Stop">⏹</Button>
                         </WrapPanel>
                     </StackPanel>
 
