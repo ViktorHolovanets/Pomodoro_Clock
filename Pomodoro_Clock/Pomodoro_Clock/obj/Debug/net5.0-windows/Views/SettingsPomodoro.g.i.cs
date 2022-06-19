@@ -93,7 +93,7 @@ namespace Pomodoro_Clock.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Pomodoro_Clock;V1.0.0.0;component/views/settingspomodoro.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Pomodoro_Clock;component/views/settingspomodoro.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Views\SettingsPomodoro.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
