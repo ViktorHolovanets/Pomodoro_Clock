@@ -10,3 +10,6 @@ Pomodoro_Clock/.vs/ProjectEvaluation/pomodoro_clock.projects.v2
 *.v1
 *.cache
 *.v2
+*.cache
+*.cache
+Pomodoro_Clock/Pomodoro_Clock/obj/Debug/net6.0-windows/Pomodoro_Clock.assets.cache
