@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Pomodoro_Clock\\Pomodoro_Clock\\Pomodoro_Clock\\Pomodoro_Clock.csproj",
+      "projectUniqueName": "F:\\Pomodoro\\Pomodoro\\Pomodoro_Clock\\Pomodoro_Clock\\Pomodoro_Clock.csproj",
       "projectName": "Pomodoro_Clock",
-      "projectPath": "F:\\Pomodoro_Clock\\Pomodoro_Clock\\Pomodoro_Clock\\Pomodoro_Clock.csproj",
+      "projectPath": "F:\\Pomodoro\\Pomodoro\\Pomodoro_Clock\\Pomodoro_Clock\\Pomodoro_Clock.csproj",
       "packagesPath": "C:\\Users\\Super\\.nuget\\packages\\",
-      "outputPath": "F:\\Pomodoro_Clock\\Pomodoro_Clock\\Pomodoro_Clock\\obj\\",
+      "outputPath": "F:\\Pomodoro\\Pomodoro\\Pomodoro_Clock\\Pomodoro_Clock\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Super\\AppData\\Roaming\\NuGet\\NuGet.Config",
