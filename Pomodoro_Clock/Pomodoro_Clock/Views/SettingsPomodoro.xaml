@@ -1,0 +1,57 @@
+﻿<Window x:Class="Pomodoro_Clock.Views.SettingsPomodoro"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Pomodoro_Clock.Views"
+        mc:Ignorable="d"
+        Title="SettingsPomodoro" Height="500" Width="450"
+         WindowStyle="None" AllowsTransparency="True" Background="Transparent" FontSize="18" WindowStartupLocation="CenterScreen">
+    <Border CornerRadius="5" Background="#FF17151D" Padding="15,50,15,15">
+        <DockPanel>
+            <Border DockPanel.Dock="Bottom" BorderThickness="1" BorderBrush="White" CornerRadius="5">
+                <Button  Click="Button_Click">Закрити</Button>
+            </Border>
+            
+            <Grid DockPanel.Dock="Top" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBlock>Тривалість Pomodora:</TextBlock>
+                <StackPanel Grid.Column="1">
+                    <TextBox x:Name="tbDurationPomodoro" TextChanged="tbDouble_TextChanged"></TextBox>
+                    <TextBlock>в хвилинах</TextBlock>
+                </StackPanel>
+                <TextBlock Grid.Row="1">Тривалість короткої перерви:</TextBlock>
+                <StackPanel Grid.Column="1" Grid.Row="1">
+                    <TextBox x:Name="tbShortPause" Background="Transparent" TextChanged="tbDouble_TextChanged"></TextBox>
+                    <TextBlock>в хвилинах</TextBlock>
+                </StackPanel>
+                <TextBlock Grid.Row="2">Тривалість великої перерви:</TextBlock>
+                <StackPanel Grid.Column="1" Grid.Row="2">
+                    <TextBox x:Name="tbLongPause" TextChanged="tbDouble_TextChanged"></TextBox>
+                    <TextBlock>в хвилинах</TextBlock>
+                </StackPanel>
+                <TextBlock Grid.Row="3" >Велика перерва через кожні:</TextBlock>
+                <StackPanel Grid.Column="1" Grid.Row="3">
+                    <TextBox x:Name="tbLongBreakDelay" TextChanged="tbInt_TextChanged"></TextBox>
+                    <TextBlock>в помодорах</TextBlock>
+                </StackPanel>
+                <TextBlock Grid.Row="4">Ціль на день</TextBlock>
+                <StackPanel Grid.Column="1" Grid.Row="4">
+                    <TextBox x:Name="tbDailGoal" TextChanged="tbInt_TextChanged"></TextBox>
+                </StackPanel>
+            </Grid>
+        </DockPanel>
+    </Border>
+</Window>

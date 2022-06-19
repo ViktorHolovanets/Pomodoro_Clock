@@ -1,0 +1,57 @@
+﻿<Window x:Class="Pomodoro_Clock.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Pomodoro_Clock"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="650" Width="800"
+        WindowStyle="None" AllowsTransparency="True" Background="Transparent" WindowStartupLocation="CenterScreen"
+        Icon="F:\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\Icons\7152657.png">
+    <Border CornerRadius="25" Background="#FF061A2B" Padding="10,10,10,10" MouseDown="Border_MouseDown">
+        <DockPanel Background="Transparent">
+            <Border x:Name="brdWorkArea" CornerRadius="15" Background="#FFE84E4E" DockPanel.Dock="Top">
+                <DockPanel>
+                    <WrapPanel DockPanel.Dock="Top" >
+                        <Button x:Name="btnClose" FontSize="18" Click="btnClose_Click">✖</Button>
+                        <Button x:Name="btnSettings" FontSize="18" Click="btnSettings_Click">⚙</Button>
+                    </WrapPanel>
+                    <StackPanel >
+                        <TextBox x:Name="tbTime" Background="Transparent" HorizontalAlignment="Center" FontSize="85" BorderBrush="Transparent" IsReadOnly="True"></TextBox>
+                        <WrapPanel HorizontalAlignment="Center">
+                            <Button x:Name="btnStartPomodoro" FontSize="25" BorderThickness="3" BorderBrush="White" FontFamily="Gabriola" Width="139" Click="btnStartPomodoro_Click" Content="Start"></Button>
+                            <Button x:Name="btnStopPomodoro" FontSize="25" BorderThickness="3" BorderBrush="White" FontFamily="Gabriola" Width="139" Click="btnStopPomodoro_Click" IsEnabled="false">Stop</Button>
+                        </WrapPanel>
+                    </StackPanel>
+
+                </DockPanel>
+            </Border>
+            <TabControl>
+                <TabItem IsSelected="True">
+                    <TabItem.Header>
+                        Заплановано
+                    </TabItem.Header>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <GroupBox Grid.Row="0" Header="Заплановано">
+                            <ScrollViewer>
+                                <ListBox Background="Transparent"></ListBox>
+                            </ScrollViewer>
+                        </GroupBox>
+                        <GroupBox Grid.Row="1" Header="Виконано" >
+                            <ScrollViewer>
+                                <ListBox Background="Transparent"></ListBox>
+                            </ScrollViewer>
+                        </GroupBox>
+                    </Grid>
+                </TabItem>
+                <TabItem Header="Планувальник" ></TabItem>
+            </TabControl>
+            
+        </DockPanel>
+    </Border>
+
+</Window>
