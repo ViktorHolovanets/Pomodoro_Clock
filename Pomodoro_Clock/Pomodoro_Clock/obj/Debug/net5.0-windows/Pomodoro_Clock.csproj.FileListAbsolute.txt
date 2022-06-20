@@ -86,6 +86,7 @@ D:\ProgramFilles\C#\Promodo_Clock\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\net5.0
 D:\ProgramFilles\C#\Promodo_Clock\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\net5.0-windows\Pomodoro_Clock.genruntimeconfig.cache
 F:\Pomodoro\Pomodoro\Pomodoro_Clock\Pomodoro_Clock\bin\Debug\net5.0-windows\LibraryFunction.dll
 F:\Pomodoro\Pomodoro\Pomodoro_Clock\Pomodoro_Clock\bin\Debug\net5.0-windows\LibraryFunction.pdb
+<<<<<<< HEAD
 D:\ProgramFilles\C#\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\bin\Debug\net5.0-windows\Pomodoro_Clock.exe
 D:\ProgramFilles\C#\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\bin\Debug\net5.0-windows\Pomodoro_Clock.deps.json
 D:\ProgramFilles\C#\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\bin\Debug\net5.0-windows\Pomodoro_Clock.runtimeconfig.json
@@ -118,3 +119,7 @@ D:\ProgramFilles\C#\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\net5.
 D:\ProgramFilles\C#\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\net5.0-windows\ref\Pomodoro_Clock.dll
 D:\ProgramFilles\C#\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\net5.0-windows\Pomodoro_Clock.pdb
 D:\ProgramFilles\C#\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\net5.0-windows\Pomodoro_Clock.genruntimeconfig.cache
+=======
+F:\Pomodoro\Pomodoro\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\net5.0-windows\Views\CustomBalloonUserControl.g.cs
+F:\Pomodoro\Pomodoro\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\net5.0-windows\Views\CustomBalloonUserControl.baml
+>>>>>>> 1
