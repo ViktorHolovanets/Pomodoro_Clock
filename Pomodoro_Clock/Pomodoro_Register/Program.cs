@@ -16,6 +16,7 @@ namespace Pomodoro_Register
             
 
             Console.ReadKey();
+            Console.Clear();
         }
     }
 }
