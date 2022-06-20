@@ -1,0 +1,6 @@
+F:\Pomodoro\Pomodoro\Pomodoro_Clock\NewPomodoro\Pomodoro_Clock\LibraryFunction\bin\Debug\LibraryFunction.dll
+F:\Pomodoro\Pomodoro\Pomodoro_Clock\NewPomodoro\Pomodoro_Clock\LibraryFunction\bin\Debug\LibraryFunction.pdb
+F:\Pomodoro\Pomodoro\Pomodoro_Clock\NewPomodoro\Pomodoro_Clock\LibraryFunction\obj\Debug\LibraryFunction.csproj.AssemblyReference.cache
+F:\Pomodoro\Pomodoro\Pomodoro_Clock\NewPomodoro\Pomodoro_Clock\LibraryFunction\obj\Debug\LibraryFunction.csproj.CoreCompileInputs.cache
+F:\Pomodoro\Pomodoro\Pomodoro_Clock\NewPomodoro\Pomodoro_Clock\LibraryFunction\obj\Debug\LibraryFunction.dll
+F:\Pomodoro\Pomodoro\Pomodoro_Clock\NewPomodoro\Pomodoro_Clock\LibraryFunction\obj\Debug\LibraryFunction.pdb

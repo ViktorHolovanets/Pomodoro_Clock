@@ -1,6 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Runtime.InteropServices;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace LibraryFunction
 {
@@ -25,7 +29,7 @@ namespace LibraryFunction
         static extern int CloseWindow(IntPtr hWnd);
 
 
-        
+
         public static void SetFocusWindow(string WindowTitle)
         {
             IntPtr bl = FindWindowByCaption(IntPtr.Zero, WindowTitle);
@@ -36,7 +40,7 @@ namespace LibraryFunction
             SetActiveWindow(bl);
         }
         //
-   
+
         public static string StringConnection(string Path)
         {
             var path = System.IO.Path.Combine(System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location), $"..\\..\\{Path}");

@@ -38,7 +38,7 @@ namespace Pomodoro_Clock.Views
             {
                 if (t.Text[i] == ',')
                 {
-                    if(t.Text.Contains(','))
+                    if (t.Text.Contains(','))
                         t.Text = t.Text.Remove(i);
                 }
                 else t.Text = t.Text.Remove(i);

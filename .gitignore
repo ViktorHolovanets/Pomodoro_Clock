@@ -32,3 +32,4 @@ Pomodoro_Clock/.vs/Pomodoro_Clock/v17/.suo
 *.editorconfig
 *.BuildWithSkipAnalyzers
 *.cs
+*.v2

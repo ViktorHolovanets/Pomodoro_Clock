@@ -1,15 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.32106.194
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32505.173
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pomodoro_Clock", "Pomodoro_Clock\Pomodoro_Clock.csproj", "{5F6D8D2B-444A-4F5F-AE2A-BE51A81F7BD6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pomodoro_Clock", "Pomodoro_Clock\Pomodoro_Clock.csproj", "{F93EC361-4638-40E4-A1E6-D62D46AEA4CF}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Library", "Library", "{645E648A-FEBD-402A-AA82-B808D5ACCD94}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibraryFunction", "LibraryFunction\LibraryFunction.csproj", "{E148921A-FAFE-43D4-9A02-ECBCA7DEC432}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pomodoro_Register", "Pomodoro_Register\Pomodoro_Register.csproj", "{8B693B9E-E881-4E5E-83F9-E2C9C119ED93}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryFunction", "LibraryFunction\LibraryFunction.csproj", "{06AA7594-0005-45CA-AF5E-0BE944E76F57}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,26 +13,19 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{5F6D8D2B-444A-4F5F-AE2A-BE51A81F7BD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5F6D8D2B-444A-4F5F-AE2A-BE51A81F7BD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5F6D8D2B-444A-4F5F-AE2A-BE51A81F7BD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5F6D8D2B-444A-4F5F-AE2A-BE51A81F7BD6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E148921A-FAFE-43D4-9A02-ECBCA7DEC432}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E148921A-FAFE-43D4-9A02-ECBCA7DEC432}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E148921A-FAFE-43D4-9A02-ECBCA7DEC432}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E148921A-FAFE-43D4-9A02-ECBCA7DEC432}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8B693B9E-E881-4E5E-83F9-E2C9C119ED93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8B693B9E-E881-4E5E-83F9-E2C9C119ED93}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8B693B9E-E881-4E5E-83F9-E2C9C119ED93}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8B693B9E-E881-4E5E-83F9-E2C9C119ED93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F93EC361-4638-40E4-A1E6-D62D46AEA4CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F93EC361-4638-40E4-A1E6-D62D46AEA4CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F93EC361-4638-40E4-A1E6-D62D46AEA4CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F93EC361-4638-40E4-A1E6-D62D46AEA4CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06AA7594-0005-45CA-AF5E-0BE944E76F57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06AA7594-0005-45CA-AF5E-0BE944E76F57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06AA7594-0005-45CA-AF5E-0BE944E76F57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06AA7594-0005-45CA-AF5E-0BE944E76F57}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{E148921A-FAFE-43D4-9A02-ECBCA7DEC432} = {645E648A-FEBD-402A-AA82-B808D5ACCD94}
-	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {078C99B4-C431-404D-AAB8-E7C95D79FD02}
+		SolutionGuid = {842F054A-5A66-42F5-A08D-CEA9CA848033}
 	EndGlobalSection
 EndGlobal

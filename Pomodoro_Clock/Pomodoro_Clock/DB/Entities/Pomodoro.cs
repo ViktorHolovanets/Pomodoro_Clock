@@ -10,12 +10,12 @@ namespace Pomodoro_Clock.DB.Entities
     {
         public Guid Id { get; set; }
         public DateTime Created { get; set; } // дата створення
-        public string? NamePomodoro { get; set; }  // назва
+        public string NamePomodoro { get; set; }  // назва
         public int DurationPomodoro { get; set; }  // тривалість часу одного Pomodoro 
         public int ShortPause { get; set; }  // коротка пауза
         public int LongPause { get; set; }  // довга пауза
         public int LongBreakDelay { get; set; }
-        public bool IsAutoStart { get; set; } 
+        public bool IsAutoStart { get; set; }
         public bool IsAutoPause { get; set; }
         public int DailGoal { get; set; }
         public Pomodoro()

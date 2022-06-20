@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Pomodoro_Clock.Views"
         mc:Ignorable="d"
-        Title="SettingsPomodoro" Height="500" Width="450"
+         Title="SettingsPomodoro" Height="500" Width="450"
          WindowStyle="None" AllowsTransparency="True" Background="Transparent" FontSize="18" WindowStartupLocation="CenterScreen">
     <Border CornerRadius="5" Background="#FF17151D" Padding="15,50,15,15">
         <DockPanel>

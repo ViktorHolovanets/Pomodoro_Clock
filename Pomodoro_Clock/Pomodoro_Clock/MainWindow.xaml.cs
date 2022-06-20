@@ -40,7 +40,7 @@ namespace Pomodoro_Clock
 
         private void btnClose_Click(object sender, RoutedEventArgs e)
         {
-           Hide();
+            Hide();
         }
 
         private void btnStartPomodoro_Click(object sender, RoutedEventArgs e)
@@ -53,7 +53,7 @@ namespace Pomodoro_Clock
             Task.Run(() => RunPomodoro(workPomodoro));
         }
 
-        private void StartTimer(object? sender, EventArgs e)
+        private void StartTimer(object sender, EventArgs e)
         {
             tbTime.Text = MyTime.ToString(@"mm\:ss");
             if (MyTime == TimeSpan.Zero) MyTimer.Stop();
@@ -127,8 +127,6 @@ namespace Pomodoro_Clock
                 StartTime(tmp.DurationPomodoro);
                 while (MyTimer.IsEnabled) { }
                 if (!IsRunPomodoro) break;
-               
-                
                 if ((i + 1) % tmp.LongBreakDelay == 0)
                 {
                     ShowBalloon("Довга перерва");
@@ -148,13 +146,13 @@ namespace Pomodoro_Clock
             {
                 brdWorkAreaBackground("#FFE84E4E");
                 tbTime.Text = TimeSpan.FromSeconds(workPomodoro.DurationPomodoro).ToString(@"mm\:ss");
+                TheEndPomodoro();
             }
             if (!Dispatcher.CheckAccess())
                 Dispatcher.Invoke(c2);
             else c2();
         }
-
-        private void btnStopPomodoro_Click(object sender, RoutedEventArgs e)
+         void TheEndPomodoro()
         {
             btnStartPomodoro.IsEnabled = true;
             btnSettings.IsEnabled = true;
@@ -162,6 +160,10 @@ namespace Pomodoro_Clock
             IsRunPomodoro = false;
             mItStopPomodoro.IsEnabled = false;
             MyTimer?.Stop();
+        }
+        private void btnStopPomodoro_Click(object sender, RoutedEventArgs e)
+        {
+            TheEndPomodoro();
         }
 
         private void TbIInfo_TrayMouseDoubleClick(object sender, RoutedEventArgs e)

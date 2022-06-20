@@ -5,13 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Pomodoro_Clock"
         mc:Ignorable="d"
-         xmlns:tb="http://www.hardcodet.net/taskbar"
+        xmlns:tb="http://www.hardcodet.net/taskbar"
         Title="MainWindow" Height="650" Width="800"
-        WindowStyle="None" AllowsTransparency="True" Background="Transparent" WindowStartupLocation="CenterScreen">
+        WindowStyle="None" AllowsTransparency="True" Background="Transparent" WindowStartupLocation="CenterScreen"
+        Icon="Resources/877814.png">
     <Border CornerRadius="25" Background="#FF061A2B" Padding="10,10,10,10" MouseDown="Border_MouseDown">
         <DockPanel Background="Transparent">
             <tb:TaskbarIcon x:Name="TbIInfo"
-                IconSource="Resources/Icons/877814.ico"
+                IconSource="Resources/877814.ico"
             ToolTipText="Pomodoro" TrayMouseDoubleClick="TbIInfo_TrayMouseDoubleClick">
                 <tb:TaskbarIcon.ContextMenu>
                     <ContextMenu FontSize="14" MaxHeight="120">
@@ -88,8 +89,7 @@
                 </TabItem>
                 <TabItem Header="Планувальник" ></TabItem>
             </TabControl>
-            
+
         </DockPanel>
     </Border>
-
 </Window>
