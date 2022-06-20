@@ -1,4 +1,5 @@
-﻿using Pomodoro_Clock.DB.Entities;
+﻿using LibraryMessage;
+using Pomodoro_Clock.DB.Entities;
 using Pomodoro_Clock.Views;
 using System;
 using System.Collections.Generic;
@@ -130,6 +131,13 @@ namespace Pomodoro_Clock
             btnStopPomodoro.IsEnabled = false;
             IsRunPomodoro =false;
             MyTimer?.Stop();
+        }
+
+        private void TbIInfo_TrayMouseDoubleClick(object sender, RoutedEventArgs e)
+        {
+            Show();
+            WindowState = WindowState.Normal;
+            MyFunction.SetFocusWindow(Title);
         }
     }
 }

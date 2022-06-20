@@ -5,11 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Pomodoro_Clock"
         mc:Ignorable="d"
+         xmlns:tb="http://www.hardcodet.net/taskbar"
         Title="MainWindow" Height="650" Width="800"
-        WindowStyle="None" AllowsTransparency="True" Background="Transparent" WindowStartupLocation="CenterScreen"
-        Icon="F:\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\Icons\7152657.png">
+        WindowStyle="None" AllowsTransparency="True" Background="Transparent" WindowStartupLocation="CenterScreen">
     <Border CornerRadius="25" Background="#FF061A2B" Padding="10,10,10,10" MouseDown="Border_MouseDown">
         <DockPanel Background="Transparent">
+            <tb:TaskbarIcon x:Name="TbIInfo"
+      
+            ToolTipText="My messanger" TrayMouseDoubleClick="TbIInfo_TrayMouseDoubleClick">
+            </tb:TaskbarIcon>
             <Border x:Name="brdWorkArea" CornerRadius="15" Background="#FFE84E4E" DockPanel.Dock="Top">
                 <DockPanel>
                     <WrapPanel DockPanel.Dock="Top" >

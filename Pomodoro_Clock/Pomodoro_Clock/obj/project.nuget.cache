@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "jkNO4CEVhbPyd61nuAPBm36gvlnmLEYKvars2mAodjGWnyNrLUFAFZ/G8+Lil3rZw6aVnguGRTsE02rQ2/0XuA==",
+  "dgSpecHash": "n1JfDS3sL9hkq8T8vzMlCoCWgVEqraBM7IeEM3iCdqvXcEMXNAKiybyhje37QdnyKSODvpnwgR9Wk7hhFWSARw==",
   "success": true,
   "projectFilePath": "F:\\Pomodoro\\Pomodoro\\Pomodoro_Clock\\Pomodoro_Clock\\Pomodoro_Clock.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Super\\.nuget\\packages\\hardcodet.notifyicon.wpf\\1.1.0\\hardcodet.notifyicon.wpf.1.1.0.nupkg.sha512"
+  ],
   "logs": []
 }
