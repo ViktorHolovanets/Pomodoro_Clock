@@ -1,5 +1,4 @@
-﻿using LibraryMessage;
-using Pomodoro_Clock.DB.Entities;
+﻿using Pomodoro_Clock.DB.Entities;
 using Pomodoro_Clock.Views;
 using System;
 using System.Collections.Generic;
@@ -139,7 +138,6 @@ namespace Pomodoro_Clock
         {
             Show();
             WindowState = WindowState.Normal;
-            MyFunction.SetFocusWindow(Title);
         }
 
 
