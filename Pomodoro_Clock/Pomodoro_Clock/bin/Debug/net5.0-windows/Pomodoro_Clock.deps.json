@@ -8,7 +8,8 @@
     ".NETCoreApp,Version=v5.0": {
       "Pomodoro_Clock/1.0.0": {
         "dependencies": {
-          "Hardcodet.NotifyIcon.Wpf": "1.1.0"
+          "Hardcodet.NotifyIcon.Wpf": "1.1.0",
+          "LibraryFunction": "1.0.0"
         },
         "runtime": {
           "Pomodoro_Clock.dll": {}
@@ -20,6 +21,11 @@
             "assemblyVersion": "1.1.0.0",
             "fileVersion": "1.1.0.17"
           }
+        }
+      },
+      "LibraryFunction/1.0.0": {
+        "runtime": {
+          "LibraryFunction.dll": {}
         }
       }
     }
@@ -36,6 +42,11 @@
       "sha512": "sha512-FFEkdRSidMrbMfQVwhCzq6KtSyR1qQojqtiUrkCyjnOOuMf7W3TNQkzFnBBxYxFe7uLk5mz7M38wFh1qdWyfvg==",
       "path": "hardcodet.notifyicon.wpf/1.1.0",
       "hashPath": "hardcodet.notifyicon.wpf.1.1.0.nupkg.sha512"
+    },
+    "LibraryFunction/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

@@ -1,0 +1,12 @@
+F:\Pomodoro\Pomodoro\Pomodoro_Clock\LibraryFunction\bin\Debug\net5.0\LibraryFunction.deps.json
+F:\Pomodoro\Pomodoro\Pomodoro_Clock\LibraryFunction\bin\Debug\net5.0\LibraryFunction.dll
+F:\Pomodoro\Pomodoro\Pomodoro_Clock\LibraryFunction\bin\Debug\net5.0\LibraryFunction.pdb
+F:\Pomodoro\Pomodoro\Pomodoro_Clock\LibraryFunction\obj\Debug\net5.0\LibraryFunction.csproj.AssemblyReference.cache
+F:\Pomodoro\Pomodoro\Pomodoro_Clock\LibraryFunction\obj\Debug\net5.0\LibraryFunction.GeneratedMSBuildEditorConfig.editorconfig
+F:\Pomodoro\Pomodoro\Pomodoro_Clock\LibraryFunction\obj\Debug\net5.0\LibraryFunction.AssemblyInfoInputs.cache
+F:\Pomodoro\Pomodoro\Pomodoro_Clock\LibraryFunction\obj\Debug\net5.0\LibraryFunction.AssemblyInfo.cs
+F:\Pomodoro\Pomodoro\Pomodoro_Clock\LibraryFunction\obj\Debug\net5.0\LibraryFunction.csproj.CoreCompileInputs.cache
+F:\Pomodoro\Pomodoro\Pomodoro_Clock\LibraryFunction\obj\Debug\net5.0\LibraryFunction.dll
+F:\Pomodoro\Pomodoro\Pomodoro_Clock\LibraryFunction\obj\Debug\net5.0\refint\LibraryFunction.dll
+F:\Pomodoro\Pomodoro\Pomodoro_Clock\LibraryFunction\obj\Debug\net5.0\LibraryFunction.pdb
+F:\Pomodoro\Pomodoro\Pomodoro_Clock\LibraryFunction\obj\Debug\net5.0\ref\LibraryFunction.dll

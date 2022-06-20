@@ -54,8 +54,6 @@ F:\Pomodoro\Pomodoro\Pomodoro_Clock\Pomodoro_Clock\bin\Debug\net5.0-windows\Hard
 F:\Pomodoro\Pomodoro\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\net5.0-windows\Pomodoro_Clock.csproj.CopyComplete
 F:\Pomodoro\Pomodoro\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\net5.0-windows\Pomodoro_Clock.Properties.Resources.resources
 F:\Pomodoro\Pomodoro\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\net5.0-windows\Pomodoro_Clock.csproj.GenerateResource.cache
-F:\Pomodoro\Pomodoro\Pomodoro_Clock\Pomodoro_Clock\bin\Debug\net5.0-windows\LibraryMessage.dll
-F:\Pomodoro\Pomodoro\Pomodoro_Clock\Pomodoro_Clock\bin\Debug\net5.0-windows\LibraryMessage.pdb
 D:\ProgramFilles\C#\Promodo_Clock\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\net5.0-windows\Pomodoro_Clock.csproj.AssemblyReference.cache
 D:\ProgramFilles\C#\Promodo_Clock\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\net5.0-windows\DictionaryResources.baml
 D:\ProgramFilles\C#\Promodo_Clock\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\net5.0-windows\MainWindow.g.cs
@@ -86,3 +84,5 @@ D:\ProgramFilles\C#\Promodo_Clock\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\net5.0
 D:\ProgramFilles\C#\Promodo_Clock\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\net5.0-windows\Pomodoro_Clock.csproj.CoreCompileInputs.cache
 D:\ProgramFilles\C#\Promodo_Clock\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\net5.0-windows\Pomodoro_Clock.csproj.CopyComplete
 D:\ProgramFilles\C#\Promodo_Clock\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\net5.0-windows\Pomodoro_Clock.genruntimeconfig.cache
+F:\Pomodoro\Pomodoro\Pomodoro_Clock\Pomodoro_Clock\bin\Debug\net5.0-windows\LibraryFunction.dll
+F:\Pomodoro\Pomodoro\Pomodoro_Clock\Pomodoro_Clock\bin\Debug\net5.0-windows\LibraryFunction.pdb

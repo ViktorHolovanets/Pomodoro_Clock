@@ -17,9 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="LibraryMessage">
-      <HintPath>..\..\..\..\MyMessanger\MyMessanger\MyMessangerExam\LibraryMessage\bin\Debug\LibraryMessage.dll</HintPath>
-    </Reference>
+    <ProjectReference Include="..\LibraryFunction\LibraryFunction.csproj" />
   </ItemGroup>
 
   <ItemGroup>
