@@ -19,7 +19,6 @@ using System.Windows.Controls.Primitives;
 using System.Windows.Controls.Ribbon;
 using System.Windows.Data;
 using System.Windows.Documents;
-using System.Windows.Forms.Integration;
 using System.Windows.Ink;
 using System.Windows.Input;
 using System.Windows.Markup;
@@ -88,7 +87,7 @@ namespace Pomodoro_Clock.Views {
         /// InitializeComponent
         /// </summary>
         [System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "5.0.13.0")]
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "6.0.5.0")]
         public void InitializeComponent() {
             if (_contentLoaded) {
                 return;
@@ -104,7 +103,7 @@ namespace Pomodoro_Clock.Views {
         }
         
         [System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "5.0.13.0")]
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "6.0.5.0")]
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
