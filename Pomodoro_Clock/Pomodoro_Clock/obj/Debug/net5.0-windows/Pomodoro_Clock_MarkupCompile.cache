@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-F:\Pomodoro\Pomodoro\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\net5.0-windows\
+D:\ProgramFilles\C#\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\net5.0-windows\
 Pomodoro_Clock
 none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
-F:\Pomodoro\Pomodoro\Pomodoro_Clock\Pomodoro_Clock\App.xaml
+D:\ProgramFilles\C#\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\App.xaml
 3-1017065588
 
 6-74094406
-204670952750
+2041069292771
 DictionaryResources.xaml;MainWindow.xaml;Views\SettingsPomodoro.xaml;
 
-False
+True
 
