@@ -10,3 +10,15 @@ F:\Pomodoro\Pomodoro\Pomodoro_Clock\LibraryFunction\obj\Debug\net5.0\LibraryFunc
 F:\Pomodoro\Pomodoro\Pomodoro_Clock\LibraryFunction\obj\Debug\net5.0\refint\LibraryFunction.dll
 F:\Pomodoro\Pomodoro\Pomodoro_Clock\LibraryFunction\obj\Debug\net5.0\LibraryFunction.pdb
 F:\Pomodoro\Pomodoro\Pomodoro_Clock\LibraryFunction\obj\Debug\net5.0\ref\LibraryFunction.dll
+D:\ProgramFilles\C#\Pomodoro_Clock\Pomodoro_Clock\LibraryFunction\bin\Debug\net5.0\LibraryFunction.deps.json
+D:\ProgramFilles\C#\Pomodoro_Clock\Pomodoro_Clock\LibraryFunction\bin\Debug\net5.0\LibraryFunction.dll
+D:\ProgramFilles\C#\Pomodoro_Clock\Pomodoro_Clock\LibraryFunction\bin\Debug\net5.0\ref\LibraryFunction.dll
+D:\ProgramFilles\C#\Pomodoro_Clock\Pomodoro_Clock\LibraryFunction\bin\Debug\net5.0\LibraryFunction.pdb
+D:\ProgramFilles\C#\Pomodoro_Clock\Pomodoro_Clock\LibraryFunction\obj\Debug\net5.0\LibraryFunction.csproj.AssemblyReference.cache
+D:\ProgramFilles\C#\Pomodoro_Clock\Pomodoro_Clock\LibraryFunction\obj\Debug\net5.0\LibraryFunction.GeneratedMSBuildEditorConfig.editorconfig
+D:\ProgramFilles\C#\Pomodoro_Clock\Pomodoro_Clock\LibraryFunction\obj\Debug\net5.0\LibraryFunction.AssemblyInfoInputs.cache
+D:\ProgramFilles\C#\Pomodoro_Clock\Pomodoro_Clock\LibraryFunction\obj\Debug\net5.0\LibraryFunction.AssemblyInfo.cs
+D:\ProgramFilles\C#\Pomodoro_Clock\Pomodoro_Clock\LibraryFunction\obj\Debug\net5.0\LibraryFunction.csproj.CoreCompileInputs.cache
+D:\ProgramFilles\C#\Pomodoro_Clock\Pomodoro_Clock\LibraryFunction\obj\Debug\net5.0\LibraryFunction.dll
+D:\ProgramFilles\C#\Pomodoro_Clock\Pomodoro_Clock\LibraryFunction\obj\Debug\net5.0\ref\LibraryFunction.dll
+D:\ProgramFilles\C#\Pomodoro_Clock\Pomodoro_Clock\LibraryFunction\obj\Debug\net5.0\LibraryFunction.pdb

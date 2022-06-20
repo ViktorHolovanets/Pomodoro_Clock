@@ -10,6 +10,12 @@ namespace Pomodoro_Register
     {
         static void Main(string[] args)
         {
+            RegSubject.RegPomodoro reg = new RegSubject.RegPomodoro();
+            reg.Start();
+
+            
+
+            Console.ReadKey();
         }
     }
 }
