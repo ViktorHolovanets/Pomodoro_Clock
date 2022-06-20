@@ -63,24 +63,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\User\\.nuget\\packages\\": {},
-    "D:\\VisualStudioCom\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Super\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\ProgramFilles\\C#\\Pomodoro_Clock\\Pomodoro_Clock\\Pomodoro_Clock\\Pomodoro_Clock.csproj",
+      "projectUniqueName": "F:\\Pomodoro\\Pomodoro\\Pomodoro_Clock\\Pomodoro_Clock\\Pomodoro_Clock.csproj",
       "projectName": "Pomodoro_Clock",
-      "projectPath": "D:\\ProgramFilles\\C#\\Pomodoro_Clock\\Pomodoro_Clock\\Pomodoro_Clock\\Pomodoro_Clock.csproj",
-      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "D:\\ProgramFilles\\C#\\Pomodoro_Clock\\Pomodoro_Clock\\Pomodoro_Clock\\obj\\",
+      "projectPath": "F:\\Pomodoro\\Pomodoro\\Pomodoro_Clock\\Pomodoro_Clock\\Pomodoro_Clock.csproj",
+      "packagesPath": "C:\\Users\\Super\\.nuget\\packages\\",
+      "outputPath": "F:\\Pomodoro\\Pomodoro\\Pomodoro_Clock\\Pomodoro_Clock\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "D:\\VisualStudioCom\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Super\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -94,8 +89,8 @@
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
           "projectReferences": {
-            "D:\\ProgramFilles\\C#\\Pomodoro_Clock\\Pomodoro_Clock\\LibraryFunction\\LibraryFunction.csproj": {
-              "projectPath": "D:\\ProgramFilles\\C#\\Pomodoro_Clock\\Pomodoro_Clock\\LibraryFunction\\LibraryFunction.csproj"
+            "F:\\Pomodoro\\Pomodoro\\Pomodoro_Clock\\LibraryFunction\\LibraryFunction.csproj": {
+              "projectPath": "F:\\Pomodoro\\Pomodoro\\Pomodoro_Clock\\LibraryFunction\\LibraryFunction.csproj"
             }
           }
         }
@@ -133,7 +128,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
       }
     }
   }

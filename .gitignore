@@ -28,3 +28,7 @@ Pomodoro_Clock/.vs/Pomodoro_Clock/v17/.suo
 *.pdb
 *.dll
 *.pdb
+*.baml
+*.editorconfig
+*.BuildWithSkipAnalyzers
+*.cs

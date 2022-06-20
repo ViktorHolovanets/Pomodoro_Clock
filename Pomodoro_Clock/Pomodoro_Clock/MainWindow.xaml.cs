@@ -94,21 +94,50 @@ namespace Pomodoro_Clock
                 Dispatcher.Invoke(c);
             else c();
         }
+        void ShowBalloon(string state)
+        {
+            void c()
+            {
+                if (Visibility == Visibility.Hidden)
+                {
+                    var tray = new CustomBalloonUserControl();
+                    var nameBindingObject = new Binding("Background");
+                    nameBindingObject.Mode = BindingMode.OneWay;
+                    nameBindingObject.Source = brdWorkArea;
+                    BindingOperations.SetBinding(tray.brBallon, Border.BackgroundProperty, nameBindingObject);
+
+                    var textBindingObject = new Binding("Text");
+                    textBindingObject.Mode = BindingMode.OneWay;
+                    textBindingObject.Source = tbTime;
+                    BindingOperations.SetBinding(tray.Username, TextBlock.TextProperty, textBindingObject);
+                    tray.tbState.Text = state;
+                    TbIInfo.ShowCustomBalloon(tray, System.Windows.Controls.Primitives.PopupAnimation.Scroll, 4000);
+                }
+            }
+            if (!Dispatcher.CheckAccess())
+                Dispatcher.Invoke(c);
+            else c();
+        }
         private void RunPomodoro(Pomodoro tmp)
         {
             for (int i = 0; i < tmp.DailGoal; i++)
             {
+                ShowBalloon("Go Go Go");
                 if (!IsRunPomodoro) break;
                 StartTime(tmp.DurationPomodoro);
                 while (MyTimer.IsEnabled) { }
                 if (!IsRunPomodoro) break;
+               
+                
                 if ((i + 1) % tmp.LongBreakDelay == 0)
                 {
+                    ShowBalloon("Довга перерва");
                     StartTime(tmp.LongPause - 1);
                     brdWorkAreaBackground("#FF4EE8AC");
                 }
                 else
                 {
+                    ShowBalloon("Коротка перерва");
                     brdWorkAreaBackground("#FF4EC8E8");
                     StartTime(tmp.ShortPause - 1);
                 }
