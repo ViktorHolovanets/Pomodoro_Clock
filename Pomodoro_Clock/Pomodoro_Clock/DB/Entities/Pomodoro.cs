@@ -26,6 +26,7 @@ namespace Pomodoro_Clock.DB.Entities
             LongPause = 120;
             LongBreakDelay = 3;
             DailGoal = 3;
+            Created= DateTime.Now;
         }
     }
 }
