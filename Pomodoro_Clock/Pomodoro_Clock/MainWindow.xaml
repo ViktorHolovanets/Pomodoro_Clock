@@ -11,13 +11,47 @@
     <Border CornerRadius="25" Background="#FF061A2B" Padding="10,10,10,10" MouseDown="Border_MouseDown">
         <DockPanel Background="Transparent">
             <tb:TaskbarIcon x:Name="TbIInfo"
-      
-            ToolTipText="My messanger" TrayMouseDoubleClick="TbIInfo_TrayMouseDoubleClick">
+                IconSource="Resources/Icons/877814.ico"
+            ToolTipText="Pomodoro" TrayMouseDoubleClick="TbIInfo_TrayMouseDoubleClick">
+                <tb:TaskbarIcon.ContextMenu>
+                    <ContextMenu FontSize="14" MaxHeight="120">
+                        <ContextMenu.Template>
+                            <ControlTemplate TargetType="ContextMenu">
+                                <Border Background="#FF1F2C39" CornerRadius="3" Padding="3" HorizontalAlignment="Center">
+                                    <ItemsPresenter/>
+                                </Border>
+                            </ControlTemplate>
+                        </ContextMenu.Template>
+                        <ContextMenu.ItemContainerStyle>
+                            <Style TargetType="MenuItem">
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="MenuItem">
+                                            <Border x:Name="brdrMenuItem" Margin="2" Background="#FF1F2C39" Padding="5">
+                                                <ContentPresenter ContentSource="Header"/>
+                                            </Border>
+                                            <ControlTemplate.Triggers>
+                                                <Trigger Property="IsMouseOver" Value="True">
+                                                    <Setter TargetName="brdrMenuItem" Property="Background" Value="#FF7C49EF"></Setter>
+                                                </Trigger>
+                                                <Trigger Property="IsEnabled" Value="False">
+                                                    <Setter TargetName="brdrMenuItem" Property="Visibility" Value="Collapsed"></Setter>
+                                                </Trigger>
+                                            </ControlTemplate.Triggers>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </ContextMenu.ItemContainerStyle>
+                        <MenuItem x:Name="mItStopPomodoro" Header="Зупинити" Foreground="Beige" Click="btnStopPomodoro_Click" IsEnabled="false" HorizontalAlignment="Center"/>
+                        <MenuItem x:Name="mItClose" Header="Закрити" Foreground="Beige" Click="mItClose_Click" HorizontalAlignment="Center"/>
+                    </ContextMenu>
+                </tb:TaskbarIcon.ContextMenu>
             </tb:TaskbarIcon>
             <Border x:Name="brdWorkArea" CornerRadius="15" Background="#FFE84E4E" DockPanel.Dock="Top">
                 <DockPanel>
                     <WrapPanel DockPanel.Dock="Top" >
-                        <Button x:Name="btnClose" FontSize="18" Click="btnClose_Click" ToolTip="Close">✖</Button>
+                        <Button x:Name="btnClose" FontSize="18" Click="btnClose_Click" ToolTip="Hide">✖</Button>
                         <Button x:Name="btnSettings" FontSize="18" Click="btnSettings_Click" ToolTip="Settings">⚙</Button>
                     </WrapPanel>
                     <StackPanel >

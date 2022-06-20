@@ -52,7 +52,6 @@ F:\Pomodoro\Pomodoro\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\net5.0-windows\Pomo
 F:\Pomodoro\Pomodoro\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\net5.0-windows\ref\Pomodoro_Clock.dll
 F:\Pomodoro\Pomodoro\Pomodoro_Clock\Pomodoro_Clock\bin\Debug\net5.0-windows\Hardcodet.NotifyIcon.Wpf.dll
 F:\Pomodoro\Pomodoro\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\net5.0-windows\Pomodoro_Clock.csproj.CopyComplete
-F:\Pomodoro\Pomodoro\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\net5.0-windows\Pomodoro_Clock_Content.g.cs
 F:\Pomodoro\Pomodoro\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\net5.0-windows\Pomodoro_Clock.Properties.Resources.resources
 F:\Pomodoro\Pomodoro\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\net5.0-windows\Pomodoro_Clock.csproj.GenerateResource.cache
 F:\Pomodoro\Pomodoro\Pomodoro_Clock\Pomodoro_Clock\bin\Debug\net5.0-windows\LibraryMessage.dll

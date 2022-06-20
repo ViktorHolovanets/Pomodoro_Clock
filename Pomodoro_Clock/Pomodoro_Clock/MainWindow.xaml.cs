@@ -28,7 +28,7 @@ namespace Pomodoro_Clock
         DispatcherTimer MyTimer;
         TimeSpan MyTime;
         Pomodoro workPomodoro;
-        bool IsRunPomodoro=false;
+        bool IsRunPomodoro = false;
         public MainWindow()
         {
             InitializeComponent();
@@ -40,15 +40,16 @@ namespace Pomodoro_Clock
 
         private void btnClose_Click(object sender, RoutedEventArgs e)
         {
-            Close();
+           Hide();
         }
 
         private void btnStartPomodoro_Click(object sender, RoutedEventArgs e)
         {
             btnStartPomodoro.IsEnabled = false;
-            btnSettings.IsEnabled=false;
+            btnSettings.IsEnabled = false;
             btnStopPomodoro.IsEnabled = true;
             IsRunPomodoro = true;
+            mItStopPomodoro.IsEnabled = true;
             Task.Run(() => RunPomodoro(workPomodoro));
         }
 
@@ -129,7 +130,8 @@ namespace Pomodoro_Clock
             btnStartPomodoro.IsEnabled = true;
             btnSettings.IsEnabled = true;
             btnStopPomodoro.IsEnabled = false;
-            IsRunPomodoro =false;
+            IsRunPomodoro = false;
+            mItStopPomodoro.IsEnabled = false;
             MyTimer?.Stop();
         }
 
@@ -139,5 +141,12 @@ namespace Pomodoro_Clock
             WindowState = WindowState.Normal;
             MyFunction.SetFocusWindow(Title);
         }
+
+
+        private void mItClose_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
     }
 }

@@ -5,11 +5,11 @@
     <TargetFramework>net5.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
-    <ApplicationIcon>Icons\877814.ico</ApplicationIcon>
+    <ApplicationIcon>Resources\Icons\877814.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="Icons\877814.ico" />
+    <Resource Include="Resources\Icons\877814.ico" />
   </ItemGroup>
 
   <ItemGroup>
