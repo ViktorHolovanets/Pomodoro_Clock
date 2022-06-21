@@ -39,7 +39,8 @@ namespace Pomodoro_Clock
             workPomodoro = new Pomodoro() { };
             Calendar.SelectedDate = DateTime.Now.Date;
             tbTime.Text = TimeSpan.FromSeconds(workPomodoro.DurationPomodoro).ToString(@"mm\:ss");
-            foreach (var item in db?.Pomodoros.Where(p => p.Created == DateTime.Now))
+            DateTime t = DateTime.Now.Date;
+            foreach (var item in db?.Pomodoros.Where(p => p.Created == t).ToList())
             {
                 PlannedPomodoroCollection.Add(item);
             }
