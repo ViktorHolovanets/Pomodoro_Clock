@@ -3,6 +3,7 @@ using Pomodoro_Clock.DB.Entities;
 using Pomodoro_Clock.Views;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -30,20 +31,24 @@ namespace Pomodoro_Clock
         TimeSpan MyTime;
         Pomodoro workPomodoro;
         bool IsRunPomodoro = false;
+        ObservableCollection<Pomodoro> PlannedPomodoroCollection;
         public MainWindow()
         {
             InitializeComponent();
-           
+
         }
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            PlannedPomodoroCollection = new ObservableCollection<Pomodoro>();
             db = new DbPomodoro(MyFunction.StringConnection("DB/DbPomodoro.mdf"));
             workPomodoro = new Pomodoro() { };
             Calendar.SelectedDate = DateTime.UtcNow;
             tbTime.Text = TimeSpan.FromSeconds(workPomodoro.DurationPomodoro).ToString(@"mm\:ss");
-            var listPomodoro = db?.Pomodoros.Where(p => p.Created == DateTime.Now).ToList();
-            if (listPomodoro != null)
-                lbPlannedPomodoro.ItemsSource = listPomodoro;
+            foreach (var item in db?.Pomodoros.Where(p => p.Created == DateTime.Now))
+            {
+                PlannedPomodoroCollection.Add(item);
+            }
+            lbPlannedPomodoro.ItemsSource = PlannedPomodoroCollection;
         }
         private void Border_MouseDown(object sender, MouseButtonEventArgs e) => DragMove();
 
@@ -211,7 +216,7 @@ namespace Pomodoro_Clock
             pomodoro.DailGoal = int.Parse(tbDailGoal.Text);
             pomodoro.IsAutoPause = cbIsAutoPause.IsChecked.Value;
             pomodoro.IsAutoStart = cbIsAutoStart.IsChecked.Value;
-            lbPlannedPomodoro.Items.Add(pomodoro);
+            PlannedPomodoroCollection.Add(pomodoro);
             db.Pomodoros.Add(pomodoro);
             db.SaveChanges();
         }
@@ -256,6 +261,6 @@ namespace Pomodoro_Clock
             Close();
         }
 
-        
+
     }
 }

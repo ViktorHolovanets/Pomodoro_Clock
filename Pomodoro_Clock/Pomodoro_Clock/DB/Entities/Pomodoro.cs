@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,7 +9,8 @@ namespace Pomodoro_Clock.DB.Entities
 {
     public class Pomodoro
     {
-        public Guid Id { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int Id { get; set; }
         public DateTime Created { get; set; } // дата створення
         public string NamePomodoro { get; set; }  // назва
         public int DurationPomodoro { get; set; }  // тривалість часу одного Pomodoro 
