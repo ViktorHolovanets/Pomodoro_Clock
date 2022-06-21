@@ -100,7 +100,7 @@
                 </TabItem>
                 <TabItem Header="Планувальник" >
                     <UniformGrid Columns="2" VerticalAlignment="Center">
-                        <Calendar x:Name="Calendar" SelectedDatesChanged="Calendar_OnSelectedDatesChanged" Style="{DynamicResource CalendarCustom}" CalendarButtonStyle="{DynamicResource CalendarButton}" CalendarDayButtonStyle="{DynamicResource CalendarDayButton}" CalendarItemStyle="{DynamicResource CalendarItem}"/>
+                        <Calendar x:Name="Calendar" Style="{DynamicResource CalendarCustom}" CalendarButtonStyle="{DynamicResource CalendarButton}" CalendarDayButtonStyle="{DynamicResource CalendarDayButton}" CalendarItemStyle="{DynamicResource CalendarItem}"/>
                         <DockPanel>
                             <Button x:Name="btnCreatePomodoro" FontSize="18" Click="btnCreate_Click" DockPanel.Dock="Top">➕</Button>
                             <Grid VerticalAlignment="Center">

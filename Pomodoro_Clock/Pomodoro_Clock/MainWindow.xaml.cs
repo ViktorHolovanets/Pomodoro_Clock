@@ -32,6 +32,7 @@ namespace Pomodoro_Clock
         Pomodoro workPomodoro;
         bool IsRunPomodoro = false;
         ObservableCollection<Pomodoro> PlannedPomodoroCollection;
+        AutoResetEvent waitHandler = new AutoResetEvent(true);
         public MainWindow()
         {
             InitializeComponent();
@@ -71,7 +72,10 @@ namespace Pomodoro_Clock
         {
             tbTime.Text = MyTime.ToString(@"mm\:ss");
             if (MyTime == TimeSpan.Zero)
+            {
                 MyTimer.Stop();
+                waitHandler.Set();
+            }
             else if (MyTime == TimeSpan.FromSeconds(3))
             {
                 ShowBalloon("Pomodoro");
@@ -153,7 +157,7 @@ namespace Pomodoro_Clock
             {
                 if (!IsRunPomodoro) break;
                 StartTime(tmp.DurationPomodoro);
-                while (MyTimer.IsEnabled) { }
+                waitHandler.WaitOne();
                 if (!IsRunPomodoro) break;
                 if ((i + 1) % tmp.LongBreakDelay == 0)
                 {
@@ -165,7 +169,7 @@ namespace Pomodoro_Clock
                     brdWorkAreaBackground("#FF4EC8E8");
                     StartTime(tmp.ShortPause - 1);
                 }
-                while (MyTimer.IsEnabled) { }
+                waitHandler.WaitOne();
                 brdWorkAreaBackground("#FFE84E4E");
             }
             void c2()
