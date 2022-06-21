@@ -1,7 +1,6 @@
-﻿using System;
-using Microsoft.Win32;
+﻿using Microsoft.Win32;
 using PomodoroRegister.Rainbow;
-using PomodoroRegister.SubSubject.Path;
+using System;
 
 namespace PomodoroRegister
 {

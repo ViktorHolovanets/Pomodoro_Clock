@@ -1,6 +1,6 @@
-﻿using System;
-using Microsoft.Win32;
+﻿using Microsoft.Win32;
 using PomodoroRegister.Rainbow;
+using System;
 
 namespace PomodoroRegister.SubSubject.Path
 {
@@ -31,7 +31,7 @@ namespace PomodoroRegister.SubSubject.Path
             }
         }
 
-        
+
         public void AddSubjectSett(string arg1, int arg2)
         {
             key.SetValue(arg1, arg2);

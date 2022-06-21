@@ -2,21 +2,15 @@
 using Pomodoro_Clock.DB.Entities;
 using Pomodoro_Clock.Views;
 using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using System.Windows.Threading;
 
 namespace Pomodoro_Clock
@@ -31,6 +25,7 @@ namespace Pomodoro_Clock
         TimeSpan MyTime;
         Pomodoro workPomodoro;
         bool IsRunPomodoro = false;
+        object obj = new object();
         ObservableCollection<Pomodoro> PlannedPomodoroCollection;
         public MainWindow()
         {
@@ -155,7 +150,7 @@ namespace Pomodoro_Clock
             {
                 if (!IsRunPomodoro) break;
                 StartTime(tmp.DurationPomodoro);
-                while (!MyTimer.IsEnabled) { }
+                while (MyTimer.IsEnabled) { }
                 if (!IsRunPomodoro) break;
                 if ((i + 1) % tmp.LongBreakDelay == 0)
                 {
@@ -167,7 +162,7 @@ namespace Pomodoro_Clock
                     brdWorkAreaBackground("#FF4EC8E8");
                     StartTime(tmp.ShortPause - 1);
                 }
-                while (!MyTimer.IsEnabled) { }
+                while (MyTimer.IsEnabled) { }
                 brdWorkAreaBackground("#FFE84E4E");
             }
             void c2()

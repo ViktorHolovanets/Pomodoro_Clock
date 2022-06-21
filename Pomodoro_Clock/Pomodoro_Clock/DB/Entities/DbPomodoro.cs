@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data.Entity;
 
 namespace Pomodoro_Clock.DB.Entities
 {
-    public class DbPomodoro: DbContext
+    public class DbPomodoro : DbContext
     {
         public DbPomodoro(string connection) : base(connection) { }
         public DbPomodoro() { }

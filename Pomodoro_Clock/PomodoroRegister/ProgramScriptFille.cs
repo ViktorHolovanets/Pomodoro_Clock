@@ -1,6 +1,4 @@
-﻿using System;
-using PomodoroRegister.SubSubject;
-using PomodoroRegister.SubSubject.Path;
+﻿using PomodoroRegister.SubSubject.Path;
 
 namespace PomodoroRegister
 {
@@ -16,9 +14,9 @@ namespace PomodoroRegister
         }
         public void Update()
         {
-           // path.AddSubjectSett("Parametr 1", 1);
-           // path.GetSubjectSett("Parametr 1");
-            
+            // path.AddSubjectSett("Parametr 1", 1);
+            // path.GetSubjectSett("Parametr 1");
+
             path.Exit();
             reg.Exit();
         }

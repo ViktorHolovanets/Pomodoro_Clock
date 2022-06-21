@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Pomodoro_Clock",
+    "\\Pomodoro_Clock\\Pomodoro_Clock"
   ],
-  "SelectedNode": "\\Pomodoro_Clock.sln",
+  "SelectedNode": "\\Pomodoro_Clock\\Pomodoro_Clock\\MainWindow.xaml.cs",
   "PreviewInSolutionExplorer": false
 }
