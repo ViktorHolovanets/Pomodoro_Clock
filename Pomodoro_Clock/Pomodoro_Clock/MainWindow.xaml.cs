@@ -37,7 +37,7 @@ namespace Pomodoro_Clock
             PlannedPomodoroCollection = new ObservableCollection<Pomodoro>();
             db = new DbPomodoro(MyFunction.StringConnection("DB/DbPomodoro.mdf"));
             workPomodoro = new Pomodoro() { };
-            Calendar.SelectedDate = DateTime.UtcNow;
+            Calendar.SelectedDate = DateTime.Now.Date;
             tbTime.Text = TimeSpan.FromSeconds(workPomodoro.DurationPomodoro).ToString(@"mm\:ss");
             foreach (var item in db?.Pomodoros.Where(p => p.Created == DateTime.Now))
             {
@@ -212,7 +212,8 @@ namespace Pomodoro_Clock
             pomodoro.DailGoal = int.Parse(tbDailGoal.Text);
             pomodoro.IsAutoPause = cbIsAutoPause.IsChecked.Value;
             pomodoro.IsAutoStart = cbIsAutoStart.IsChecked.Value;
-            PlannedPomodoroCollection.Add(pomodoro);
+            if (pomodoro.Created.Date == DateTime.Now.Date)
+                PlannedPomodoroCollection.Add(pomodoro);
             db.Pomodoros.Add(pomodoro);
             db.SaveChanges();
         }

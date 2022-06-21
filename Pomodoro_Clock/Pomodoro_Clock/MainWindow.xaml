@@ -81,10 +81,16 @@
                                     <ListBox.ItemTemplate>
                                         <DataTemplate>
                                             <Border>
-                                                <WrapPanel>
-                                                    <TextBlock Text="{Binding NamePomodoro}" ToolTip="Назва Pomodora"></TextBlock>
-                                                    <TextBlock Text="{Binding DailGoal}" ToolTip="Кількість повтору"></TextBlock>
-                                                </WrapPanel>
+                                                <StackPanel>
+                                                    <WrapPanel>
+                                                        <TextBlock Text="Назва Pomodora:" ToolTip="Назва Pomodora" Margin="7" Foreground="Azure"></TextBlock>
+                                                        <TextBlock Text="{Binding NamePomodoro}" ToolTip="Назва Pomodora" Margin="7"></TextBlock>
+                                                    </WrapPanel>
+                                                    <WrapPanel>
+                                                        <TextBlock Text="Кількість повтору:" ToolTip="Назва Pomodora" Margin="7" Foreground="Azure"></TextBlock>
+                                                        <TextBlock Text="{Binding DailGoal}" ToolTip="Кількість повтору" Margin="7"></TextBlock>
+                                                    </WrapPanel>
+                                                </StackPanel>
                                             </Border>
                                         </DataTemplate>
                                     </ListBox.ItemTemplate>
