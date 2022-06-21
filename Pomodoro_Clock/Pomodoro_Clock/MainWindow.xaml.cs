@@ -35,9 +35,6 @@ namespace Pomodoro_Clock
             InitializeComponent();
             workPomodoro = new Pomodoro() { };
             tbTime.Text = TimeSpan.FromSeconds(workPomodoro.DurationPomodoro).ToString(@"mm\:ss");
-            db = new DbPomodoro(MyFunction.StringConnection(@"Db\DatabasePomodors.mdf"));
-            db.Pomodoros.Add(workPomodoro);
-            db.SaveChanges();
         }
 
         private void Border_MouseDown(object sender, MouseButtonEventArgs e) => DragMove();
@@ -60,7 +57,22 @@ namespace Pomodoro_Clock
         private void StartTimer(object sender, EventArgs e)
         {
             tbTime.Text = MyTime.ToString(@"mm\:ss");
-            if (MyTime == TimeSpan.Zero) MyTimer.Stop();
+            if (MyTime == TimeSpan.Zero) 
+                MyTimer.Stop();
+            else if(MyTime == TimeSpan.FromSeconds(3))
+            {        
+                ShowBalloon("Pomodoro");
+                Task.Run(() =>
+                {
+                    for (int i = 0; i < 3; i++)
+                    {
+                        Console.Beep(264, 500);
+                        Thread.Sleep(500);
+                    }
+                    Console.Beep(325, 500);
+                });
+                
+            }
             MyTime = MyTime.Add(TimeSpan.FromSeconds(-1));
         }
 
@@ -125,21 +137,18 @@ namespace Pomodoro_Clock
         private void RunPomodoro(Pomodoro tmp)
         {
             for (int i = 0; i < tmp.DailGoal; i++)
-            {
-                ShowBalloon("Go Go Go");
+            {               
                 if (!IsRunPomodoro) break;
                 StartTime(tmp.DurationPomodoro);
                 while (MyTimer.IsEnabled) { }
                 if (!IsRunPomodoro) break;
                 if ((i + 1) % tmp.LongBreakDelay == 0)
-                {
-                    ShowBalloon("Довга перерва");
+                {                   
                     StartTime(tmp.LongPause - 1);
                     brdWorkAreaBackground("#FF4EE8AC");
                 }
                 else
-                {
-                    ShowBalloon("Коротка перерва");
+                {            
                     brdWorkAreaBackground("#FF4EC8E8");
                     StartTime(tmp.ShortPause - 1);
                 }
