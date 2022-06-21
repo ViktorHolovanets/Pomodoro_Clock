@@ -151,3 +151,6 @@ F:\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\Pomodor
 F:\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\Pomodoro_Clock.csproj.CoreCompileInputs.cache
 F:\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\Pomodoro_Clock.csproj.CopyComplete
 F:\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\Pomodoro_Clock.pdb
+F:\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\bin\Debug\DB\DbPomodoro.mdf
+F:\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\bin\Debug\DB\DbPomodoro_log.ldf
+F:\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\Pomodoro_Clock_Content.g.cs
