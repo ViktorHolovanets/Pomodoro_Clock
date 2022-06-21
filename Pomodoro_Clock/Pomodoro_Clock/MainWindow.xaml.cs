@@ -37,7 +37,6 @@ namespace Pomodoro_Clock
             tbTime.Text = TimeSpan.FromSeconds(workPomodoro.DurationPomodoro).ToString(@"mm\:ss");
             db = new DbPomodoro(MyFunction.StringConnection(@"Db\DatabasePomodors.mdf"));
             db.Pomodoros.Add(workPomodoro);
-            db.SaveChanges();
         }
 
         private void Border_MouseDown(object sender, MouseButtonEventArgs e) => DragMove();
