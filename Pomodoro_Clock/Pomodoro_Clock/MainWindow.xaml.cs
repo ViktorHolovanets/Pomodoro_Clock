@@ -111,7 +111,6 @@ namespace Pomodoro_Clock
         }
         void StartTime(object time)
         {
-            waitHandler.WaitOne();
             int n = (int)time;
             MyTime = TimeSpan.FromSeconds(n - 1);
             MyTimer = new DispatcherTimer(new TimeSpan(0, 0, 1), DispatcherPriority.Normal, StartTimer, Application.Current.Dispatcher);
@@ -158,7 +157,7 @@ namespace Pomodoro_Clock
             {
                 if (!IsRunPomodoro) break;
                 StartTime(tmp.DurationPomodoro);
-                
+                waitHandler.Reset();
                 if (!IsRunPomodoro) break;
                 if ((i + 1) % tmp.LongBreakDelay == 0)
                 {
@@ -167,10 +166,10 @@ namespace Pomodoro_Clock
                 }
                 else
                 {
-                    StartTime(tmp.ShortPause - 1);
                     brdWorkAreaBackground("#FF4EC8E8");
+                    StartTime(tmp.ShortPause - 1);
                 }
-               
+                waitHandler.Reset();
                 brdWorkAreaBackground("#FFE84E4E");
             }
             void c2()
