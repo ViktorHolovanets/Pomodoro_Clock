@@ -16,3 +16,9 @@ C:\Users\Onyshchenko Max\source\repos\Ivan7419\Pomodoro_Clock\Pomodoro_Clock\Lib
 C:\Users\Onyshchenko Max\source\repos\Ivan7419\Pomodoro_Clock\Pomodoro_Clock\LibraryFunction\obj\Debug\LibraryFunction.csproj.CoreCompileInputs.cache
 C:\Users\Onyshchenko Max\source\repos\Ivan7419\Pomodoro_Clock\Pomodoro_Clock\LibraryFunction\obj\Debug\LibraryFunction.dll
 C:\Users\Onyshchenko Max\source\repos\Ivan7419\Pomodoro_Clock\Pomodoro_Clock\LibraryFunction\obj\Debug\LibraryFunction.pdb
+F:\Pomodoro\Pomodoro\Pomodoro_Clock\LibraryFunction\bin\Debug\LibraryFunction.dll
+F:\Pomodoro\Pomodoro\Pomodoro_Clock\LibraryFunction\bin\Debug\LibraryFunction.pdb
+F:\Pomodoro\Pomodoro\Pomodoro_Clock\LibraryFunction\obj\Debug\LibraryFunction.csproj.AssemblyReference.cache
+F:\Pomodoro\Pomodoro\Pomodoro_Clock\LibraryFunction\obj\Debug\LibraryFunction.csproj.CoreCompileInputs.cache
+F:\Pomodoro\Pomodoro\Pomodoro_Clock\LibraryFunction\obj\Debug\LibraryFunction.dll
+F:\Pomodoro\Pomodoro\Pomodoro_Clock\LibraryFunction\obj\Debug\LibraryFunction.pdb

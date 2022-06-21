@@ -37,10 +37,10 @@ namespace Pomodoro_Clock
         }
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            db = new DbPomodoro(MyFunction.StringConnection("DB/DbPomodoro.mdf"));
             workPomodoro = new Pomodoro() { };
             Calendar.SelectedDate = DateTime.UtcNow;
             tbTime.Text = TimeSpan.FromSeconds(workPomodoro.DurationPomodoro).ToString(@"mm\:ss");
-            db = new DbPomodoro(MyFunction.StringConnection("DB/DbPomodoro.mdf"));
             var listPomodoro = db?.Pomodoros.Where(p => p.Created == DateTime.Now).ToList();
             if (listPomodoro != null)
                 lbPlannedPomodoro.ItemsSource = listPomodoro;
