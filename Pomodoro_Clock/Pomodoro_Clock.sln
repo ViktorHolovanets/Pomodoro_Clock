@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.2.32505.173
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32106.194
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pomodoro_Clock", "Pomodoro_Clock\Pomodoro_Clock.csproj", "{F93EC361-4638-40E4-A1E6-D62D46AEA4CF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryFunction", "LibraryFunction\LibraryFunction.csproj", "{06AA7594-0005-45CA-AF5E-0BE944E76F57}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PomodoroRegister", "PomodoroRegister\PomodoroRegister.csproj", "{449364F6-3D33-4D7F-A3DF-6BA20DDC4713}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{06AA7594-0005-45CA-AF5E-0BE944E76F57}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{06AA7594-0005-45CA-AF5E-0BE944E76F57}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{06AA7594-0005-45CA-AF5E-0BE944E76F57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{449364F6-3D33-4D7F-A3DF-6BA20DDC4713}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{449364F6-3D33-4D7F-A3DF-6BA20DDC4713}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{449364F6-3D33-4D7F-A3DF-6BA20DDC4713}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{449364F6-3D33-4D7F-A3DF-6BA20DDC4713}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
