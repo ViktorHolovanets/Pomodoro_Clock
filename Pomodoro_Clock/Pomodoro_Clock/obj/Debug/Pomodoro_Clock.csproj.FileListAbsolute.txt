@@ -86,6 +86,7 @@ D:\ProgramFilles\C#\Pomodoro\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\Pomodoro_Cl
 D:\ProgramFilles\C#\Pomodoro\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\Pomodoro_Clock.csproj.CopyComplete
 D:\ProgramFilles\C#\Pomodoro\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\Pomodoro_Clock.pdb
 F:\Pomodoro\Pomodoro\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\App.baml
+<<<<<<< HEAD
 C:\Users\Onyshchenko Max\source\repos\Ivan7419\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\Pomodoro_Clock.csproj.AssemblyReference.cache
 C:\Users\Onyshchenko Max\source\repos\Ivan7419\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\Pomodoro_Clock.csproj.SuggestedBindingRedirects.cache
 C:\Users\Onyshchenko Max\source\repos\Ivan7419\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\DictionaryResources.baml
@@ -117,3 +118,5 @@ C:\Users\Onyshchenko Max\source\repos\Ivan7419\Pomodoro_Clock\Pomodoro_Clock\Pom
 C:\Users\Onyshchenko Max\source\repos\Ivan7419\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\Pomodoro_Clock.csproj.CoreCompileInputs.cache
 C:\Users\Onyshchenko Max\source\repos\Ivan7419\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\Pomodoro_Clock.csproj.CopyComplete
 C:\Users\Onyshchenko Max\source\repos\Ivan7419\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\Pomodoro_Clock.pdb
+=======
+>>>>>>> 1
