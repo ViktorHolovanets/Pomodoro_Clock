@@ -81,7 +81,6 @@ namespace Pomodoro_Clock
                     }
                     Console.Beep(325, 500);
                 });
-
             }
             MyTime = MyTime.Add(TimeSpan.FromSeconds(-1));
         }
