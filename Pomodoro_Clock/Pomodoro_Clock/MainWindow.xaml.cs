@@ -33,10 +33,18 @@ namespace Pomodoro_Clock
         public MainWindow()
         {
             InitializeComponent();
-            workPomodoro = new Pomodoro() { };
-            tbTime.Text = TimeSpan.FromSeconds(workPomodoro.DurationPomodoro).ToString(@"mm\:ss");
+           
         }
-
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            workPomodoro = new Pomodoro() { };
+            Calendar.SelectedDate = DateTime.UtcNow;
+            tbTime.Text = TimeSpan.FromSeconds(workPomodoro.DurationPomodoro).ToString(@"mm\:ss");
+            db = new DbPomodoro(MyFunction.StringConnection("DB/DbPomodoro.mdf"));
+            var listPomodoro = db?.Pomodoros.Where(p => p.Created == DateTime.Now).ToList();
+            if (listPomodoro != null)
+                lbPlannedPomodoro.ItemsSource = listPomodoro;
+        }
         private void Border_MouseDown(object sender, MouseButtonEventArgs e) => DragMove();
 
         private void btnClose_Click(object sender, RoutedEventArgs e)
@@ -57,10 +65,10 @@ namespace Pomodoro_Clock
         private void StartTimer(object sender, EventArgs e)
         {
             tbTime.Text = MyTime.ToString(@"mm\:ss");
-            if (MyTime == TimeSpan.Zero) 
+            if (MyTime == TimeSpan.Zero)
                 MyTimer.Stop();
-            else if(MyTime == TimeSpan.FromSeconds(3))
-            {        
+            else if (MyTime == TimeSpan.FromSeconds(3))
+            {
                 ShowBalloon("Pomodoro");
                 Task.Run(() =>
                 {
@@ -71,7 +79,7 @@ namespace Pomodoro_Clock
                     }
                     Console.Beep(325, 500);
                 });
-                
+
             }
             MyTime = MyTime.Add(TimeSpan.FromSeconds(-1));
         }
@@ -137,18 +145,18 @@ namespace Pomodoro_Clock
         private void RunPomodoro(Pomodoro tmp)
         {
             for (int i = 0; i < tmp.DailGoal; i++)
-            {               
+            {
                 if (!IsRunPomodoro) break;
                 StartTime(tmp.DurationPomodoro);
                 while (MyTimer.IsEnabled) { }
                 if (!IsRunPomodoro) break;
                 if ((i + 1) % tmp.LongBreakDelay == 0)
-                {                   
+                {
                     StartTime(tmp.LongPause - 1);
                     brdWorkAreaBackground("#FF4EE8AC");
                 }
                 else
-                {            
+                {
                     brdWorkAreaBackground("#FF4EC8E8");
                     StartTime(tmp.ShortPause - 1);
                 }
@@ -165,7 +173,7 @@ namespace Pomodoro_Clock
                 Dispatcher.Invoke(c2);
             else c2();
         }
-         void TheEndPomodoro()
+        void TheEndPomodoro()
         {
             btnStartPomodoro.IsEnabled = true;
             btnSettings.IsEnabled = true;
@@ -203,7 +211,7 @@ namespace Pomodoro_Clock
             pomodoro.DailGoal = int.Parse(tbDailGoal.Text);
             pomodoro.IsAutoPause = cbIsAutoPause.IsChecked.Value;
             pomodoro.IsAutoStart = cbIsAutoStart.IsChecked.Value;
-
+            lbPlannedPomodoro.Items.Add(pomodoro);
             db.Pomodoros.Add(pomodoro);
             db.SaveChanges();
         }
@@ -248,5 +256,6 @@ namespace Pomodoro_Clock
             Close();
         }
 
+        
     }
 }
