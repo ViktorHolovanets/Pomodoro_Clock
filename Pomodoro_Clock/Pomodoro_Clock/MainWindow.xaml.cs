@@ -186,6 +186,62 @@ namespace Pomodoro_Clock
             MyFunction.SetFocusWindow(Title);
         }
 
+        private void btnCreate_Click(object sender, RoutedEventArgs e)
+        {
+            if (Calendar.SelectedDate.Value < DateTime.Today)
+            {
+                return;
+            }
+            Pomodoro pomodoro = new Pomodoro();
+            pomodoro.Created = Calendar.SelectedDate.Value;
+            pomodoro.Completed = false;
+            pomodoro.NamePomodoro = tbPomodoroName.Text;
+            pomodoro.DurationPomodoro = (int)(Double.Parse(tbDurationPomodoro.Text) * 60);
+            pomodoro.ShortPause = (int)(Double.Parse(tbShortPause.Text) * 60);
+            pomodoro.LongPause = (int)(Double.Parse(tbLongPause.Text) * 60);
+            pomodoro.LongBreakDelay = int.Parse(tbLongBreakDelay.Text);
+            pomodoro.DailGoal = int.Parse(tbDailGoal.Text);
+            pomodoro.IsAutoPause = cbIsAutoPause.IsChecked.Value;
+            pomodoro.IsAutoStart = cbIsAutoStart.IsChecked.Value;
+
+            db.Pomodoros.Add(pomodoro);
+            db.SaveChanges();
+        }
+
+        private void tbDouble_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            TextBox t = (TextBox)sender;
+            int i = t.Text.Length - 1;
+            double n;
+            if (!Double.TryParse(t.Text, out n) && i != -1)
+            {
+                if (t.Text[i] == ',')
+                {
+                    if (t.Text.Contains(','))
+                        t.Text = t.Text.Remove(i);
+                }
+                else t.Text = t.Text.Remove(i);
+            }
+            t.Select(t.Text.Length, 0);
+        }
+
+        private void tbInt_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            TextBox t = (TextBox)sender;
+            int i = t.Text.Length - 1;
+            double n;
+            if (!Double.TryParse(t.Text, out n) && i != -1)
+            {
+                t.Text = t.Text.Remove(i);
+            }
+            t.Select(t.Text.Length, 0);
+        }
+
+        private void Calendar_OnSelectedDatesChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Pomodoro pomodoro = (from pom in db.Pomodoros where (pom.Created == Calendar.SelectedDate.Value) select pom).FirstOrDefault();
+        }
+
 
         private void mItClose_Click(object sender, RoutedEventArgs e)
         {

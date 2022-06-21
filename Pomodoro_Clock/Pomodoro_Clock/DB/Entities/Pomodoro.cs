@@ -17,16 +17,17 @@ namespace Pomodoro_Clock.DB.Entities
         public int LongBreakDelay { get; set; }
         public bool IsAutoStart { get; set; }
         public bool IsAutoPause { get; set; }
+        public bool Completed { get; set; }
         public int DailGoal { get; set; }
         public Pomodoro()
         {
-            NamePomodoro = "1";
-            DurationPomodoro = 60;
-            ShortPause = 60;
-            LongPause = 120;
-            LongBreakDelay = 3;
-            DailGoal = 3;
-            Created= DateTime.Now;
+            //NamePomodoro = "1";
+            //DurationPomodoro = 60;
+            //ShortPause = 60;
+            //LongPause = 120;
+            //LongBreakDelay = 3;
+            //DailGoal = 3;
+            //Created= DateTime.Now;
         }
     }
 }

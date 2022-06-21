@@ -87,7 +87,60 @@
                         </GroupBox>
                     </Grid>
                 </TabItem>
-                <TabItem Header="Планувальник" ></TabItem>
+                <TabItem Header="Планувальник" >
+                    <UniformGrid Columns="2" VerticalAlignment="Center">
+                        <Calendar x:Name="Calendar" SelectedDatesChanged="Calendar_OnSelectedDatesChanged" Style="{DynamicResource CalendarCustom}" CalendarButtonStyle="{DynamicResource CalendarButton}" CalendarDayButtonStyle="{DynamicResource CalendarDayButton}" CalendarItemStyle="{DynamicResource CalendarItem}"/>
+                        <DockPanel>
+                            <Button x:Name="btnCreatePomodoro" FontSize="18" Click="btnCreate_Click" DockPanel.Dock="Top">➕</Button>
+                            <Grid VerticalAlignment="Center">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <TextBlock Margin="0,0,0,10">Назва Pomodora:</TextBlock>
+                                <TextBox Grid.Column="1" x:Name="tbPomodoroName" Margin="0,0,0,10"></TextBox>
+                                <TextBlock Grid.Row="1" Margin="0,0,0,10">Тривалість Pomodora:</TextBlock>
+                                <StackPanel Grid.Column="1" Grid.Row="1">
+                                    <TextBox x:Name="tbDurationPomodoro" TextChanged="tbDouble_TextChanged"></TextBox>
+                                    <TextBlock>в хвилинах</TextBlock>
+                                </StackPanel>
+                                <TextBlock Grid.Row="2">Тривалість короткої перерви:</TextBlock>
+                                <StackPanel Grid.Column="1" Grid.Row="2">
+                                    <TextBox x:Name="tbShortPause" Background="Transparent" TextChanged="tbDouble_TextChanged"></TextBox>
+                                    <TextBlock>в хвилинах</TextBlock>
+                                </StackPanel>
+                                <TextBlock Grid.Row="3">Тривалість великої перерви:</TextBlock>
+                                <StackPanel Grid.Column="1" Grid.Row="3">
+                                    <TextBox x:Name="tbLongPause" TextChanged="tbDouble_TextChanged"></TextBox>
+                                    <TextBlock>в хвилинах</TextBlock>
+                                </StackPanel>
+                                <TextBlock Grid.Row="4" >Велика перерва через кожні:</TextBlock>
+                                <StackPanel Grid.Column="1" Grid.Row="4">
+                                    <TextBox x:Name="tbLongBreakDelay" TextChanged="tbInt_TextChanged"></TextBox>
+                                    <TextBlock>в помодорах</TextBlock>
+                                </StackPanel>
+                                <TextBlock Grid.Row="5">Ціль на день</TextBlock>
+                                <StackPanel Grid.Column="1" Grid.Row="5" Margin="0,0,0,10">
+                                    <TextBox x:Name="tbDailGoal" TextChanged="tbInt_TextChanged"></TextBox>
+                                </StackPanel>
+                                <TextBlock Grid.Row="6"> Автостарт для Pomodora</TextBlock>
+                                <CheckBox x:Name="cbIsAutoStart" Grid.Row="6" Style="{DynamicResource CheckBoxStyle1}" Grid.Column="1" HorizontalAlignment="Center" Margin="0,0,0,10"></CheckBox>
+                                <TextBlock Grid.Row="7"> Автостарт для перерви</TextBlock>
+                                <CheckBox x:Name="cbIsAutoPause" Style="{DynamicResource CheckBoxStyle1}" Grid.Row="7" Grid.Column="1" HorizontalAlignment="Center" Margin="0,0,0,10"></CheckBox>
+                            </Grid>
+                        </DockPanel>
+                    </UniformGrid>
+                </TabItem>
             </TabControl>
 
         </DockPanel>
