@@ -362,3 +362,6 @@ MigrationBackup/
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
 Pomodoro_Clock/.vs/Pomodoro_Clock/v17/.suo
+*.exe
+*.exe
+Pomodoro_Clock/.vs/Pomodoro_Clock/v17/.suo
