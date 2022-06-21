@@ -167,8 +167,8 @@ namespace Pomodoro_Clock
                 }
                 else
                 {
-                    brdWorkAreaBackground("#FF4EC8E8");
                     StartTime(tmp.ShortPause - 1);
+                    brdWorkAreaBackground("#FF4EC8E8");
                 }
                
                 brdWorkAreaBackground("#FFE84E4E");
