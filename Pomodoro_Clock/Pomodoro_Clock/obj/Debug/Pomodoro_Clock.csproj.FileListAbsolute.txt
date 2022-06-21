@@ -45,7 +45,6 @@ F:\Pomodoro\Pomodoro\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\Views\SettingsPomod
 F:\Pomodoro\Pomodoro\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\App.g.cs
 F:\Pomodoro\Pomodoro\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\Pomodoro_Clock_MarkupCompile.cache
 F:\Pomodoro\Pomodoro\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\Pomodoro_Clock_MarkupCompile.lref
-F:\Pomodoro\Pomodoro\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\App.baml
 F:\Pomodoro\Pomodoro\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\MainWindow.baml
 F:\Pomodoro\Pomodoro\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\Views\CustomBalloonUserControl.baml
 F:\Pomodoro\Pomodoro\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\Views\SettingsPomodoro.baml
@@ -86,3 +85,4 @@ D:\ProgramFilles\C#\Pomodoro\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\Pomodoro_Cl
 D:\ProgramFilles\C#\Pomodoro\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\Pomodoro_Clock.csproj.CoreCompileInputs.cache
 D:\ProgramFilles\C#\Pomodoro\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\Pomodoro_Clock.csproj.CopyComplete
 D:\ProgramFilles\C#\Pomodoro\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\Pomodoro_Clock.pdb
+F:\Pomodoro\Pomodoro\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\App.baml

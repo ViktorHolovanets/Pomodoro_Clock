@@ -19,10 +19,6 @@ namespace PomodoroRegister
            // path.AddSubjectSett("Parametr 1", 1);
            // path.GetSubjectSett("Parametr 1");
             
-            
-        }
-        public void Exit()
-        {
             path.Exit();
             reg.Exit();
         }
