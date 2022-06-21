@@ -66,9 +66,10 @@ namespace Pomodoro_Clock
                 {
                     for (int i = 0; i < 3; i++)
                     {
-                        Console.Beep(700, 500);
+                        Console.Beep(264, 500);
                         Thread.Sleep(500);
                     }
+                    Console.Beep(325, 500);
                 });
                 
             }
