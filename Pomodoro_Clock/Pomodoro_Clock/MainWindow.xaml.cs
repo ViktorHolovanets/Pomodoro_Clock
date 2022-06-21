@@ -249,13 +249,6 @@ namespace Pomodoro_Clock
             }
             t.Select(t.Text.Length, 0);
         }
-
-        private void Calendar_OnSelectedDatesChanged(object sender, SelectionChangedEventArgs e)
-        {
-            Pomodoro pomodoro = (from pom in db.Pomodoros where (pom.Created == Calendar.SelectedDate.Value) select pom).FirstOrDefault();
-        }
-
-
         private void mItClose_Click(object sender, RoutedEventArgs e)
         {
             Close();
