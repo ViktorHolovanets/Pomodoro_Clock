@@ -252,6 +252,28 @@ namespace Pomodoro_Clock
             Close();
         }
 
+        private void RadioButton_Checked(object sender, RoutedEventArgs e)
+        {
+            RadioButton pressed = (RadioButton)sender;
+            SearchResult(pressed.Tag);
+        }
 
+        private void SearchResult(object tag)
+        {
+            MessageBox.Show(tag.ToString());
+            switch (tag.ToString())
+            {
+                case "PomodoroDay":
+                    break;
+                case "PomodoroMonth":
+                    break;
+                case "MaxDurationPomodoro":
+                    break;
+                case "MaxNumberPomodoro":
+                    break;
+                default:
+                    break;
+            }
+        }
     }
 }

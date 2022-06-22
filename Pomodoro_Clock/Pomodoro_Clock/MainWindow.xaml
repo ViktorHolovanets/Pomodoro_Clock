@@ -158,7 +158,23 @@
                         </DockPanel>
                     </UniformGrid>
                 </TabItem>
-                <TabItem Header="Статистика"></TabItem>
+                <TabItem Header="Статистика">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.5*"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <StackPanel>
+                            <RadioButton Tag="PomodoroDay" Checked="RadioButton_Checked">Помодорний день</RadioButton>
+                            <RadioButton Tag="PomodoroMonth" Checked="RadioButton_Checked">Помодорний місяць</RadioButton>
+                            <RadioButton Tag="MaxDurationPomodoro" Checked="RadioButton_Checked">Найдовший помодор</RadioButton>
+                            <RadioButton Tag="MaxNumberPomodoro" Checked="RadioButton_Checked">Найбільша кількість повторень</RadioButton>
+                        </StackPanel>
+                        <ListBox x:Name="lbResultStatistics" Grid.Column="1">
+                            
+                        </ListBox>
+                    </Grid>
+                </TabItem>
             </TabControl>
 
         </DockPanel>

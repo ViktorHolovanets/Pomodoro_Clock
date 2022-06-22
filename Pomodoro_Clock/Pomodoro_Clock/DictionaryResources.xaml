@@ -250,7 +250,7 @@
             </Setter.Value>
         </Setter>
     </Style>
-    <!---->
+    <!--ToolTip-->
 
     <Style TargetType="ToolTip">
         <Setter Property="OverridesDefaultStyle" Value="True"/>
@@ -746,5 +746,11 @@
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
+    </Style>
+    <!--RadioButton-->
+
+    <Style TargetType="RadioButton">
+        <Setter Property="Margin" Value="7"/>
+        <Setter Property="FontSize" Value="18"/>
     </Style>
 </ResourceDictionary>
