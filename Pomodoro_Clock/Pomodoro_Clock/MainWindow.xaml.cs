@@ -31,6 +31,8 @@ namespace Pomodoro_Clock
         object obj = new object();
         string connection;
         ObservableCollection<Pomodoro> PlannedPomodoroCollection;
+        ObservableCollection<Pomodoro> CompletedPomodoroCollection;
+        bool IsEndPomdoro = true;
         public MainWindow()
         {
             InitializeComponent();
@@ -41,15 +43,21 @@ namespace Pomodoro_Clock
             connection = MyFunction.StringConnection("DB/DbPomodoro.mdf");
             dapper = new DB.Dapper.Dapper(connection);
             PlannedPomodoroCollection = new ObservableCollection<Pomodoro>();
+            CompletedPomodoroCollection=new ObservableCollection<Pomodoro>();
             db = new DbPomodoro(connection);
             workPomodoro = new Pomodoro() { };
             Calendar.SelectedDate = DateTime.Now.Date;
             tbTime.Text = TimeSpan.FromSeconds(workPomodoro.DurationPomodoro).ToString(@"mm\:ss");
             DateTime t = DateTime.Now.Date;
-            foreach (var item in db?.Pomodoros.Where(p => p.Created == t).ToList())
+            foreach (var item in db?.Pomodoros.Where(p => p.Created == t&& !p.Completed).ToList())
             {
                 PlannedPomodoroCollection.Add(item);
             }
+            foreach (var item in db?.Pomodoros.Where(p => p.Created == t && p.Completed).ToList())
+            {
+                CompletedPomodoroCollection.Add(item);
+            }
+            lbCompledPomodoro.ItemsSource = CompletedPomodoroCollection;
             lbPlannedPomodoro.ItemsSource = PlannedPomodoroCollection;
         }
         private void Border_MouseDown(object sender, MouseButtonEventArgs e) => DragMove();
@@ -94,18 +102,10 @@ namespace Pomodoro_Clock
 
         private void btnSettings_Click(object sender, RoutedEventArgs e)
         {
-            SettingsPomodoro p = new SettingsPomodoro();
-            p.tbDurationPomodoro.Text = ((double)workPomodoro.DurationPomodoro / 60).ToString();
-            p.tbShortPause.Text = ((double)(workPomodoro.ShortPause / 60)).ToString();
-            p.tbLongPause.Text = ((double)(workPomodoro.LongPause / 60)).ToString();
-            p.tbLongBreakDelay.Text = workPomodoro.LongBreakDelay.ToString();
-            p.tbDailGoal.Text = workPomodoro.DailGoal.ToString();
+            SettingsPomodoro p = new SettingsPomodoro(workPomodoro);
+           
             p.ShowDialog();
-            workPomodoro.DurationPomodoro = (int)(Double.Parse(p.tbDurationPomodoro.Text) * 60);
-            workPomodoro.ShortPause = (int)(Double.Parse(p.tbShortPause.Text) * 60);
-            workPomodoro.LongPause = (int)(Double.Parse(p.tbLongPause.Text) * 60);
-            workPomodoro.LongBreakDelay = int.Parse(p.tbLongBreakDelay.Text);
-            workPomodoro.DailGoal = int.Parse(p.tbDailGoal.Text);
+            workPomodoro = p.PomodoroSettings;
             tbTime.Text = TimeSpan.FromSeconds(workPomodoro.DurationPomodoro).ToString(@"mm\:ss");
         }
         void StartTime(object time)
@@ -165,8 +165,8 @@ namespace Pomodoro_Clock
                 }
                 else
                 {
-                    brdWorkAreaBackground("#FF4EC8E8");
                     StartTime(tmp.ShortPause - 1);
+                    brdWorkAreaBackground("#FF4EC8E8");                   
                 }
                 while (MyTimer.IsEnabled) { }
                 brdWorkAreaBackground("#FFE84E4E");
@@ -176,10 +176,18 @@ namespace Pomodoro_Clock
                 brdWorkAreaBackground("#FFE84E4E");
                 tbTime.Text = TimeSpan.FromSeconds(workPomodoro.DurationPomodoro).ToString(@"mm\:ss");
                 TheEndPomodoro();
+                if (IsEndPomdoro)
+                {
+                    workPomodoro.Completed = true;
+                    db.SaveChanges();
+                    CompletedPomodoroCollection.Add(workPomodoro);
+                }
             }
             if (!Dispatcher.CheckAccess())
                 Dispatcher.Invoke(c2);
             else c2();
+            
+            IsEndPomdoro = true;
         }
         void TheEndPomodoro()
         {
@@ -192,6 +200,7 @@ namespace Pomodoro_Clock
         }
         private void btnStopPomodoro_Click(object sender, RoutedEventArgs e)
         {
+            IsEndPomdoro = false;
             TheEndPomodoro();
         }
 
@@ -301,6 +310,12 @@ namespace Pomodoro_Clock
                 item.ValueAppendix = stringvalue;
             }
             lbResultStatistics.ItemsSource = tmp;
+        }
+
+        private void lbPlannedPomodoro_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            workPomodoro=(Pomodoro)lbPlannedPomodoro.SelectedItem;
+            tbTime.Text = TimeSpan.FromSeconds(workPomodoro.DurationPomodoro).ToString(@"mm\:ss");
         }
     }
 }

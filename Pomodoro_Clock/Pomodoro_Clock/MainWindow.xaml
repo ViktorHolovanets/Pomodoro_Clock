@@ -77,7 +77,7 @@
                         </Grid.RowDefinitions>
                         <GroupBox Grid.Row="0" Header="Заплановано">
                             <ScrollViewer>
-                                <ListBox x:Name="lbPlannedPomodoro" Background="Transparent">
+                                <ListBox x:Name="lbPlannedPomodoro" Background="Transparent" SelectionChanged="lbPlannedPomodoro_SelectionChanged">
                                     <ListBox.ItemTemplate>
                                         <DataTemplate>
                                             <Border>
@@ -99,7 +99,24 @@
                         </GroupBox>
                         <GroupBox Grid.Row="1" Header="Виконано" >
                             <ScrollViewer>
-                                <ListBox Background="Transparent"></ListBox>
+                                <ListBox x:Name="lbCompledPomodoro" Background="Transparent">
+                                    <ListBox.ItemTemplate>
+                                        <DataTemplate>
+                                            <Border>
+                                                <StackPanel>
+                                                    <WrapPanel>
+                                                        <TextBlock Text="Назва Pomodora:" ToolTip="Назва Pomodora" Margin="7" Foreground="Azure"></TextBlock>
+                                                        <TextBlock Text="{Binding NamePomodoro}" ToolTip="Назва Pomodora" Margin="7"></TextBlock>
+                                                    </WrapPanel>
+                                                    <WrapPanel>
+                                                        <TextBlock Text="Кількість повтору:" ToolTip="Назва Pomodora" Margin="7" Foreground="Azure"></TextBlock>
+                                                        <TextBlock Text="{Binding DailGoal}" ToolTip="Кількість повтору" Margin="7"></TextBlock>
+                                                    </WrapPanel>
+                                                </StackPanel>
+                                            </Border>
+                                        </DataTemplate>
+                                    </ListBox.ItemTemplate>
+                                </ListBox>
                             </ScrollViewer>
                         </GroupBox>
                     </Grid>

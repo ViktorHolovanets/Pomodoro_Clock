@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Pomodoro_Clock.DB.Entities;
+using System;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
@@ -10,13 +11,21 @@ namespace Pomodoro_Clock.Views
     /// </summary>
     public partial class SettingsPomodoro : Window
     {
-        public SettingsPomodoro()
+        public Pomodoro PomodoroSettings;
+        public SettingsPomodoro(Pomodoro tmp)
         {
             InitializeComponent();
+            PomodoroSettings = new Pomodoro();
+            PomodoroSettings=tmp;   
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            PomodoroSettings.DurationPomodoro = (int)(Double.Parse(tbDurationPomodoro.Text) * 60);
+            PomodoroSettings.ShortPause = (int)(Double.Parse(tbShortPause.Text) * 60);
+            PomodoroSettings.LongPause = (int)(Double.Parse(tbLongPause.Text) * 60);
+            PomodoroSettings.LongBreakDelay = int.Parse(tbLongBreakDelay.Text);
+            PomodoroSettings.DailGoal = int.Parse(tbDailGoal.Text);
             Close();
         }
 
@@ -47,6 +56,15 @@ namespace Pomodoro_Clock.Views
                 t.Text = t.Text.Remove(i);
             }
             t.Select(t.Text.Length, 0);
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            tbDurationPomodoro.Text = ((double)PomodoroSettings.DurationPomodoro / 60).ToString();
+            tbShortPause.Text = ((double)(PomodoroSettings.ShortPause / 60)).ToString();
+            tbLongPause.Text = ((double)(PomodoroSettings.LongPause / 60)).ToString();
+            tbLongBreakDelay.Text = PomodoroSettings.LongBreakDelay.ToString();
+            tbDailGoal.Text = PomodoroSettings.DailGoal.ToString();
         }
     }
 }
