@@ -86,6 +86,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="DB\Dapper\Dapper.cs" />
+    <Compile Include="DB\Dapper\ResultDapper.cs" />
     <Compile Include="DB\Entities\DbPomodoro.cs" />
     <Compile Include="Views\CustomBalloonUserControl.xaml.cs">
       <DependentUpon>CustomBalloonUserControl.xaml</DependentUpon>

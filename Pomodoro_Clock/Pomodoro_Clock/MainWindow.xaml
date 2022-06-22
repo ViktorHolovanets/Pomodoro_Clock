@@ -161,17 +161,34 @@
                 <TabItem Header="Статистика">
                     <Grid>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="0.5*"/>
-                            <ColumnDefinition/>
+                            <ColumnDefinition Width="33*"/>
+                            <ColumnDefinition Width="15*"/>
+                            <ColumnDefinition Width="207*"/>
+                            <ColumnDefinition Width="511*"/>
                         </Grid.ColumnDefinitions>
-                        <StackPanel>
+                        <StackPanel Grid.ColumnSpan="3">
                             <RadioButton Tag="PomodoroDay" Checked="RadioButton_Checked">Помодорний день</RadioButton>
                             <RadioButton Tag="PomodoroMonth" Checked="RadioButton_Checked">Помодорний місяць</RadioButton>
                             <RadioButton Tag="MaxDurationPomodoro" Checked="RadioButton_Checked">Найдовший помодор</RadioButton>
                             <RadioButton Tag="MaxNumberPomodoro" Checked="RadioButton_Checked">Найбільша кількість повторень</RadioButton>
                         </StackPanel>
-                        <ListBox x:Name="lbResultStatistics" Grid.Column="1">
-                            
+                        <ListBox x:Name="lbResultStatistics" Grid.Column="3" Margin="5,5,5,5">
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <Border>
+                                        <StackPanel>
+                                            <WrapPanel>
+                                                <TextBlock Text="Результат:" ToolTip="Назва Pomodora" Margin="7" Foreground="Azure"></TextBlock>
+                                                <TextBlock Text="{Binding NameResult}" Margin="7"></TextBlock>
+                                            </WrapPanel>
+                                            <WrapPanel>
+                                                <TextBlock Text="Значення:" ToolTip="Назва Pomodora" Margin="7" Foreground="Azure"></TextBlock>
+                                                <TextBlock Text="{Binding NumberResult}" ToolTip="Кількість повтору" Margin="7"></TextBlock>
+                                            </WrapPanel>
+                                        </StackPanel>
+                                    </Border>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
                         </ListBox>
                     </Grid>
                 </TabItem>

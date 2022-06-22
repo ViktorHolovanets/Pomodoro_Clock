@@ -32,3 +32,5 @@ F:\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\Pomodor
 F:\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\Pomodoro_Clock.csproj.CopyComplete
 F:\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\Pomodoro_Clock.exe
 F:\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\Pomodoro_Clock.pdb
+F:\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\bin\Debug\Dapper.dll
+F:\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\bin\Debug\Dapper.xml

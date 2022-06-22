@@ -20,12 +20,14 @@ namespace Pomodoro_Clock
     /// </summary>
     public partial class MainWindow : Window
     {
+        DB.Dapper.Dapper dapper;
         DbPomodoro db;
         DispatcherTimer MyTimer;
         TimeSpan MyTime;
         Pomodoro workPomodoro;
         bool IsRunPomodoro = false;
         object obj = new object();
+        string connection;
         ObservableCollection<Pomodoro> PlannedPomodoroCollection;
         public MainWindow()
         {
@@ -34,8 +36,10 @@ namespace Pomodoro_Clock
         }
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            connection = MyFunction.StringConnection("DB/DbPomodoro.mdf");
+            dapper = new DB.Dapper.Dapper(connection);
             PlannedPomodoroCollection = new ObservableCollection<Pomodoro>();
-            db = new DbPomodoro(MyFunction.StringConnection("DB/DbPomodoro.mdf"));
+            db = new DbPomodoro(connection);
             workPomodoro = new Pomodoro() { };
             Calendar.SelectedDate = DateTime.Now.Date;
             tbTime.Text = TimeSpan.FromSeconds(workPomodoro.DurationPomodoro).ToString(@"mm\:ss");
@@ -260,16 +264,20 @@ namespace Pomodoro_Clock
 
         private void SearchResult(object tag)
         {
-            MessageBox.Show(tag.ToString());
+            
             switch (tag.ToString())
             {
                 case "PomodoroDay":
+                    lbResultStatistics.ItemsSource = dapper.DayPomodoro().ToList();
                     break;
                 case "PomodoroMonth":
+                    lbResultStatistics.ItemsSource = dapper.MonthPomodoro().ToList();
                     break;
                 case "MaxDurationPomodoro":
+                    lbResultStatistics.ItemsSource = dapper.MaxDurationPomodoro().ToList();
                     break;
                 case "MaxNumberPomodoro":
+                    lbResultStatistics.ItemsSource = dapper.MaxNumberPomodoro().ToList();
                     break;
                 default:
                     break;
