@@ -15,10 +15,13 @@ namespace Pomodoro_Clock.Views
         public SettingsPomodoro(Pomodoro tmp)
         {
             InitializeComponent();
-            PomodoroSettings = new Pomodoro();
-            PomodoroSettings=tmp;   
+            PomodoroSettings = tmp;
         }
-
+        public SettingsPomodoro()
+        {
+            InitializeComponent();
+            PomodoroSettings = new Pomodoro();
+        }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             PomodoroSettings.DurationPomodoro = (int)(Double.Parse(tbDurationPomodoro.Text) * 60);
@@ -61,10 +64,10 @@ namespace Pomodoro_Clock.Views
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             tbDurationPomodoro.Text = ((double)PomodoroSettings.DurationPomodoro / 60).ToString();
-            tbShortPause.Text = ((double)(PomodoroSettings.ShortPause / 60)).ToString();
-            tbLongPause.Text = ((double)(PomodoroSettings.LongPause / 60)).ToString();
+            tbShortPause.Text = ((double)PomodoroSettings.ShortPause / 60).ToString();
+            tbLongPause.Text = ((double)PomodoroSettings.LongPause / 60).ToString();
             tbLongBreakDelay.Text = PomodoroSettings.LongBreakDelay.ToString();
-            tbDailGoal.Text = PomodoroSettings.DailGoal.ToString();
+            tbDailGoal.Text = PomodoroSettings.DailGoal.ToString();           
         }
     }
 }

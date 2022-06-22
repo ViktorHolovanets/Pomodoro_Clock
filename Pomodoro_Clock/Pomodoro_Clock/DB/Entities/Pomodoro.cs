@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Pomodoro_Clock.DB.Entities
 {
-    public class Pomodoro
+    public class Pomodoro : ICloneable
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
@@ -26,6 +26,23 @@ namespace Pomodoro_Clock.DB.Entities
             //LongBreakDelay = 3;
             //DailGoal = 3;
             //Created = DateTime.Now;
+        }
+
+        public object Clone()
+        {
+            return new Pomodoro()
+            {
+                DurationPomodoro = this.DurationPomodoro,
+                Created = this.Created,
+                NamePomodoro = this.NamePomodoro,
+                Completed = this.Completed,
+                DailGoal = this.DailGoal,
+                IsAutoPause = this.IsAutoPause,
+                IsAutoStart = this.IsAutoStart,
+                LongBreakDelay = this.LongBreakDelay,
+                LongPause = this.LongPause,
+                ShortPause = this.ShortPause
+            };
         }
     }
 }
