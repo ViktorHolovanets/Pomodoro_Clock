@@ -158,6 +158,7 @@
                         </DockPanel>
                     </UniformGrid>
                 </TabItem>
+                <TabItem Header="Статистика"></TabItem>
             </TabControl>
 
         </DockPanel>
