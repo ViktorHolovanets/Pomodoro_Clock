@@ -10,5 +10,7 @@ namespace Pomodoro_Clock.DB.Dapper
     {
         public string NameResult { get; set; }
         public int NumberResult { get; set; }
+        public string NameAppendix { get; set; }
+        public string ValueAppendix { get; set; }
     }
 }

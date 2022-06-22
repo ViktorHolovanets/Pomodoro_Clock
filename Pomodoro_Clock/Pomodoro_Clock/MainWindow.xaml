@@ -178,11 +178,11 @@
                                     <Border>
                                         <StackPanel>
                                             <WrapPanel>
-                                                <TextBlock Text="Результат:" ToolTip="Назва Pomodora" Margin="7" Foreground="Azure"></TextBlock>
+                                                <TextBlock x:Name="tbNameRes" Text="{Binding NameAppendix}" Margin="7" Foreground="Azure"></TextBlock>
                                                 <TextBlock Text="{Binding NameResult}" Margin="7"></TextBlock>
                                             </WrapPanel>
                                             <WrapPanel>
-                                                <TextBlock Text="Значення:" ToolTip="Назва Pomodora" Margin="7" Foreground="Azure"></TextBlock>
+                                                <TextBlock x:Name="tbvalueRes" Text="{Binding ValueAppendix}" Margin="7" Foreground="Azure"></TextBlock>
                                                 <TextBlock Text="{Binding NumberResult}" ToolTip="Кількість повтору" Margin="7"></TextBlock>
                                             </WrapPanel>
                                         </StackPanel>

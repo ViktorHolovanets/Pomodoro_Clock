@@ -1,7 +1,9 @@
 ﻿using LibraryFunction;
+using Pomodoro_Clock.DB.Dapper;
 using Pomodoro_Clock.DB.Entities;
 using Pomodoro_Clock.Views;
 using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading;
@@ -264,24 +266,41 @@ namespace Pomodoro_Clock
 
         private void SearchResult(object tag)
         {
-            
+            List<ResultDapper> tmp=null;
+            string stringname=null, stringvalue=null;
             switch (tag.ToString())
             {
                 case "PomodoroDay":
-                    lbResultStatistics.ItemsSource = dapper.DayPomodoro().ToList();
+                    tmp = dapper.DayPomodoro().ToList();
+                    stringname = "Дата: ";
+                    stringvalue = "Кількість помодорів: ";
                     break;
                 case "PomodoroMonth":
-                    lbResultStatistics.ItemsSource = dapper.MonthPomodoro().ToList();
+                    stringname = "Місяць: ";
+                    stringvalue = "Кількість помодорів: ";
+                    tmp = dapper.MonthPomodoro().ToList();
                     break;
                 case "MaxDurationPomodoro":
-                    lbResultStatistics.ItemsSource = dapper.MaxDurationPomodoro().ToList();
+                    stringname = "Назва Pomodoro: ";
+                    stringvalue = "Тривалість(секунд): ";
+                    tmp = dapper.MaxDurationPomodoro().ToList();
                     break;
                 case "MaxNumberPomodoro":
-                    lbResultStatistics.ItemsSource = dapper.MaxNumberPomodoro().ToList();
+                    stringname = "Назва Pomodoro: ";
+                    stringvalue = "Кількість Pomodoro: ";
+                    tmp = dapper.MaxNumberPomodoro().ToList();
                     break;
                 default:
                     break;
             }
+            foreach (var item in tmp)
+            {
+                if (tag.ToString() == "PomodoroDay")
+                    item.NameResult = item.NameResult.Split(' ')[0];
+                item.NameAppendix = stringname;
+                item.ValueAppendix = stringvalue;
+            }
+            lbResultStatistics.ItemsSource = tmp;
         }
     }
 }
