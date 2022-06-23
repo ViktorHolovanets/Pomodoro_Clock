@@ -1,5 +1,3 @@
-F:\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\bin\Debug\DB\DbPomodoro.mdf
-F:\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\bin\Debug\DB\DbPomodoro_log.ldf
 F:\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\bin\Debug\Pomodoro_Clock.exe.config
 F:\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\bin\Debug\Pomodoro_Clock.exe
 F:\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\bin\Debug\Pomodoro_Clock.pdb
@@ -18,7 +16,6 @@ F:\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\MainWin
 F:\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\Views\CustomBalloonUserControl.g.cs
 F:\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\Views\SettingsPomodoro.g.cs
 F:\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\App.g.cs
-F:\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\Pomodoro_Clock_Content.g.cs
 F:\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\Pomodoro_Clock_MarkupCompile.cache
 F:\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\Pomodoro_Clock_MarkupCompile.lref
 F:\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\App.baml
