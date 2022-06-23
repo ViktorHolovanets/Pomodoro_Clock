@@ -24,8 +24,6 @@ namespace Pomodoro_Clock.Views
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            PomodoroSettings.IsAutoStart=cbIsAutoStart.IsChecked.Value;
-            PomodoroSettings.IsAutoPause= cbIsAutoPause.IsChecked.Value;
             PomodoroSettings.DurationPomodoro = (int)(Double.Parse(tbDurationPomodoro.Text) * 60);
             PomodoroSettings.ShortPause = (int)(Double.Parse(tbShortPause.Text) * 60);
             PomodoroSettings.LongPause = (int)(Double.Parse(tbLongPause.Text) * 60);
@@ -69,9 +67,7 @@ namespace Pomodoro_Clock.Views
             tbShortPause.Text = ((double)PomodoroSettings.ShortPause / 60).ToString();
             tbLongPause.Text = ((double)PomodoroSettings.LongPause / 60).ToString();
             tbLongBreakDelay.Text = PomodoroSettings.LongBreakDelay.ToString();
-            tbDailGoal.Text = PomodoroSettings.DailGoal.ToString();
-            cbIsAutoStart.IsChecked = PomodoroSettings.IsAutoStart;
-            cbIsAutoPause.IsChecked=PomodoroSettings.IsAutoPause;
+            tbDailGoal.Text = PomodoroSettings.DailGoal.ToString();           
         }
     }
 }

@@ -50,10 +50,6 @@
                 <StackPanel Grid.Column="1" Grid.Row="4">
                     <TextBox x:Name="tbDailGoal" TextChanged="tbInt_TextChanged"></TextBox>
                 </StackPanel>
-                <TextBlock Grid.Row="5"> Автостарт для Pomodora</TextBlock>
-                <CheckBox x:Name="cbIsAutoStart" Grid.Row="5" Style="{DynamicResource CheckBoxStyle1}" Grid.Column="1" HorizontalAlignment="Center" Margin="0,0,0,10"></CheckBox>
-                <TextBlock Grid.Row="7"> Автостарт для перерви</TextBlock>
-                <CheckBox x:Name="cbIsAutoPause" Style="{DynamicResource CheckBoxStyle1}" Grid.Row="7" Grid.Column="1" HorizontalAlignment="Center" Margin="0,0,0,10"></CheckBox>
             </Grid>
         </DockPanel>
     </Border>
