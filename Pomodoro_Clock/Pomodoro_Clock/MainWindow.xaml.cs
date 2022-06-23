@@ -152,23 +152,34 @@ namespace Pomodoro_Clock
                 Dispatcher.Invoke(c);
             else c();
         }
+        void StopThread()
+        {
+            void c2()
+            {
+                btnStartPomodoro.IsEnabled = true;
+            }
+            if (!Dispatcher.CheckAccess())
+                Dispatcher.Invoke(c2);
+            else c2();
+            MyResetEvent.WaitOne();
+        }
         private void RunPomodoro(Pomodoro tmp)
         {
             for (int i = 0; i < tmp.DailGoal; i++)
             {
                 MyResetEvent.WaitOne();
                 brdWorkAreaBackground("#FFE84E4E");
-                if (!IsRunPomodoro) break;
+                if (!IsRunPomodoro) break;                
                 StartTime(tmp.DurationPomodoro);
                 MyResetEvent.WaitOne();
                 if (!IsRunPomodoro) break;
                 if ((i + 1) % tmp.LongBreakDelay == 0)
-                {
+                {                   
                     StartTime(tmp.LongPause - 1);
                     brdWorkAreaBackground("#FF4EE8AC");
                 }
                 else
-                {
+                {                    
                     StartTime(tmp.ShortPause - 1);
                     brdWorkAreaBackground("#FF4EC8E8");
                 }
@@ -200,9 +211,11 @@ namespace Pomodoro_Clock
             IsRunPomodoro = false;
             mItStopPomodoro.IsEnabled = false;
             MyTimer?.Stop();
+            MyResetEvent.Set();
         }
         private void btnStopPomodoro_Click(object sender, RoutedEventArgs e)
         {
+
             IsEndPomdoro = false;
             TheEndPomodoro();
         }
@@ -318,7 +331,7 @@ namespace Pomodoro_Clock
         private void lbPlannedPomodoro_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (IsRunPomodoro) return;
-            if (lbPlannedPomodoro.SelectedIndex!= -1)
+            if (lbPlannedPomodoro.SelectedIndex != -1)
                 workPomodoro = (Pomodoro)lbPlannedPomodoro.SelectedItem;
             tbTime.Text = TimeSpan.FromSeconds(workPomodoro.DurationPomodoro).ToString(@"mm\:ss");
         }
