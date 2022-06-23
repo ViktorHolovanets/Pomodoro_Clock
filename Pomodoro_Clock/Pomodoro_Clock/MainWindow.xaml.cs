@@ -48,7 +48,7 @@ namespace Pomodoro_Clock
             db = new DbPomodoro(connection);
             workPomodoro = new Pomodoro() { };
             Calendar.SelectedDate = DateTime.Now.Date;
-            tbTime.Text = TimeSpan.FromSeconds(workPomodoro.DurationPomodoro).ToString(@"mm\:ss");
+            ShowTime(workPomodoro.DurationPomodoro);
             DateTime t = DateTime.Now.Date;
             foreach (var item in db?.Pomodoros.Where(p => p.Created == t && !p.Completed).ToList())
             {
@@ -70,7 +70,8 @@ namespace Pomodoro_Clock
 
         private void btnStartPomodoro_Click(object sender, RoutedEventArgs e)
         {
-            btnStartPomodoro.IsEnabled = false;
+            btnStartPomodoro.Content = "⏸️";
+            
             btnSettings.IsEnabled = false;
             btnStopPomodoro.IsEnabled = true;
             IsRunPomodoro = true;
@@ -108,7 +109,7 @@ namespace Pomodoro_Clock
             p.ShowDialog();
             workPomodoro = p.PomodoroSettings;
             lbPlannedPomodoro.SelectedIndex = -1;
-            tbTime.Text = TimeSpan.FromSeconds(workPomodoro.DurationPomodoro).ToString(@"mm\:ss");
+            ShowTime(workPomodoro.DurationPomodoro);
         }
         void StartTime(object time)
         {
@@ -123,6 +124,16 @@ namespace Pomodoro_Clock
             {
                 var bc = new BrushConverter();
                 brdWorkArea.Background = (Brush)bc.ConvertFrom(obj);
+            }
+            if (!Dispatcher.CheckAccess())
+                Dispatcher.Invoke(c);
+            else c();
+        }
+        void ShowTime(int n)
+        {
+            void c()
+            {
+                tbTime.Text = TimeSpan.FromSeconds(n).ToString(@"mm\:ss");
             }
             if (!Dispatcher.CheckAccess())
                 Dispatcher.Invoke(c);
@@ -152,17 +163,7 @@ namespace Pomodoro_Clock
                 Dispatcher.Invoke(c);
             else c();
         }
-        void StopThread()
-        {
-            void c2()
-            {
-                btnStartPomodoro.IsEnabled = true;
-            }
-            if (!Dispatcher.CheckAccess())
-                Dispatcher.Invoke(c2);
-            else c2();
-            MyResetEvent.WaitOne();
-        }
+        
         private void RunPomodoro(Pomodoro tmp)
         {
             for (int i = 0; i < tmp.DailGoal; i++)
@@ -174,12 +175,14 @@ namespace Pomodoro_Clock
                 MyResetEvent.WaitOne();
                 if (!IsRunPomodoro) break;
                 if ((i + 1) % tmp.LongBreakDelay == 0)
-                {                   
-                    StartTime(tmp.LongPause - 1);
+                {
+                    ShowTime(tmp.LongPause);
                     brdWorkAreaBackground("#FF4EE8AC");
+                    StartTime(tmp.LongPause - 1);
                 }
                 else
-                {                    
+                {
+                    ShowTime(tmp.ShortPause);
                     StartTime(tmp.ShortPause - 1);
                     brdWorkAreaBackground("#FF4EC8E8");
                 }
@@ -205,7 +208,7 @@ namespace Pomodoro_Clock
         }
         void TheEndPomodoro()
         {
-            btnStartPomodoro.IsEnabled = true;
+            btnStartPomodoro.Content = "▶";
             btnSettings.IsEnabled = true;
             btnStopPomodoro.IsEnabled = false;
             IsRunPomodoro = false;
@@ -333,7 +336,7 @@ namespace Pomodoro_Clock
             if (IsRunPomodoro) return;
             if (lbPlannedPomodoro.SelectedIndex != -1)
                 workPomodoro = (Pomodoro)lbPlannedPomodoro.SelectedItem;
-            tbTime.Text = TimeSpan.FromSeconds(workPomodoro.DurationPomodoro).ToString(@"mm\:ss");
+            ShowTime(workPomodoro.DurationPomodoro);
         }
 
         private void lbPlannedPomodoro_MouseDoubleClick(object sender, MouseButtonEventArgs e)
@@ -341,7 +344,7 @@ namespace Pomodoro_Clock
             SettingsPomodoro p = new SettingsPomodoro(workPomodoro);
             p.ShowDialog();
             workPomodoro = p.PomodoroSettings;
-            tbTime.Text = TimeSpan.FromSeconds(workPomodoro.DurationPomodoro).ToString(@"mm\:ss");
+            ShowTime(workPomodoro.DurationPomodoro);
         }
     }
 }
