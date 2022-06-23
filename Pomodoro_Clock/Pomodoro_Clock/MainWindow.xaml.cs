@@ -70,7 +70,7 @@ namespace Pomodoro_Clock
 
         private void btnStartPomodoro_Click(object sender, RoutedEventArgs e)
         {
-            btnStartPomodoro.IsEnabled=false;          
+            btnStartPomodoro.IsEnabled = false;
             btnSettings.IsEnabled = false;
             btnStopPomodoro.IsEnabled = true;
             IsRunPomodoro = true;
@@ -104,7 +104,9 @@ namespace Pomodoro_Clock
 
         private void btnSettings_Click(object sender, RoutedEventArgs e)
         {
-            SettingsPomodoro p = new SettingsPomodoro((Pomodoro)workPomodoro.Clone());
+            var tmp = (Pomodoro)workPomodoro.Clone();
+            tmp.NamePomodoro = "not Planned Pomodoro";
+            SettingsPomodoro p = new SettingsPomodoro(tmp);
             p.ShowDialog();
             workPomodoro = p.PomodoroSettings;
             lbPlannedPomodoro.SelectedIndex = -1;
@@ -163,10 +165,12 @@ namespace Pomodoro_Clock
                 Dispatcher.Invoke(c);
             else c();
         }
-        void AutoStart_Pause()
+        void AutoStart_Pause(int n, string color)
         {
             void c()
             {
+                brdWorkAreaBackground(color);
+                ShowTime(n);
                 btnNextStartPomodoro.Visibility = Visibility.Visible;
             }
             if (!Dispatcher.CheckAccess())
@@ -174,35 +178,44 @@ namespace Pomodoro_Clock
             else c();
             MyResetEvent.WaitOne();
         }
-        
+        void PreparationTimer(int time, string color)
+        {
+            brdWorkAreaBackground(color);
+            ShowTime(time);
+            if (!IsRunPomodoro) return;
+            StartTime(time - 1);
+        }
         private void RunPomodoro(Pomodoro tmp)
         {
+            int timePause;
+            string color;
             for (int i = 0; i < tmp.DailGoal; i++)
-            {   
-                if (!IsRunPomodoro) break;
-                brdWorkAreaBackground("#FFE84E4E");
-                ShowTime(tmp.DurationPomodoro);
+            {
+                
                 MyResetEvent.WaitOne();
-                StartTime(tmp.DurationPomodoro-1);           
-                if (workPomodoro.IsAutoPause)
-                    AutoStart_Pause();
+                if (workPomodoro.IsAutoStart&&i!=0)
+                    AutoStart_Pause(tmp.DurationPomodoro, "#FFE84E4E");
+                PreparationTimer(tmp.DurationPomodoro, "#FFE84E4E");              
+                if (!IsRunPomodoro) break;               
+                MyResetEvent.WaitOne();
                 if (!IsRunPomodoro) break;
+                
                 if ((i + 1) % tmp.LongBreakDelay == 0)
                 {
-                    ShowTime(tmp.LongPause);
-                    brdWorkAreaBackground("#FF4EE8AC");
-                    MyResetEvent.WaitOne();
-                    StartTime(tmp.LongPause - 1);
+                    timePause = tmp.LongPause;
+                    color= "#FF4EE8AC";                   
+                    if (!IsRunPomodoro) break;                   
                 }
                 else
                 {
-                    ShowTime(tmp.ShortPause);
-                    brdWorkAreaBackground("#FF4EC8E8");
-                    MyResetEvent.WaitOne();
-                    StartTime(tmp.ShortPause - 1);            
-                }               
-                if (workPomodoro.IsAutoStart)
-                    AutoStart_Pause();
+                    timePause = tmp.ShortPause;
+                    color = "#FF4EC8E8";                   
+                    if (!IsRunPomodoro) break;
+                }
+                if (workPomodoro.IsAutoPause)
+                    AutoStart_Pause(timePause,color);
+                PreparationTimer(timePause, color);
+               
             }
             void c2()
             {
@@ -211,7 +224,9 @@ namespace Pomodoro_Clock
                 TheEndPomodoro();
                 if (IsEndPomdoro)
                 {
-                    workPomodoro.Completed = true;
+                    workPomodoro.Completed = true;                    
+                    if (workPomodoro.NamePomodoro == "not Planned Pomodoro")
+                        db.Pomodoros.Add(workPomodoro);
                     db.SaveChanges();
                     CompletedPomodoroCollection.Add(workPomodoro);
                     PlannedPomodoroCollection.Remove(workPomodoro);
