@@ -250,8 +250,15 @@ namespace Pomodoro_Clock
 
         private void btnCreate_Click(object sender, RoutedEventArgs e)
         {
-            if (Calendar.SelectedDate.Value < DateTime.Today)
+            if (Calendar.SelectedDate.Value < DateTime.Today ||
+                string.IsNullOrWhiteSpace(tbPomodoroName.Text) ||
+                string.IsNullOrWhiteSpace(tbShortPause.Text) ||
+                string.IsNullOrWhiteSpace(tbLongPause.Text) ||
+                string.IsNullOrWhiteSpace(tbLongBreakDelay.Text) ||
+                string.IsNullOrWhiteSpace(tbDailGoal.Text))
+
             {
+                MessageBox.Show("Не всі поля заповнені", "Помилка", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
             Pomodoro pomodoro = new Pomodoro();
@@ -267,8 +274,19 @@ namespace Pomodoro_Clock
             pomodoro.IsAutoStart = cbIsAutoStart.IsChecked.Value;
             if (pomodoro.Created.Date == DateTime.Now.Date)
                 PlannedPomodoroCollection.Add(pomodoro);
+
             db.Pomodoros.Add(pomodoro);
             db.SaveChanges();
+
+            Calendar.SelectedDate = DateTime.Now;
+            tbPomodoroName.Clear();
+            tbDurationPomodoro.Clear();
+            tbShortPause.Clear();
+            tbLongPause.Clear();
+            tbLongBreakDelay.Clear();
+            tbDailGoal.Clear();
+            cbIsAutoPause.IsChecked = true;
+            cbIsAutoStart.IsChecked = true;
         }
 
         private void tbDouble_TextChanged(object sender, TextChangedEventArgs e)
