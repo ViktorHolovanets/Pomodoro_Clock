@@ -230,6 +230,7 @@ namespace Pomodoro_Clock
                     db.SaveChanges();
                     CompletedPomodoroCollection.Add(workPomodoro);
                     PlannedPomodoroCollection.Remove(workPomodoro);
+                    scrollViewer.ScrollToEnd();
                 }
             }
             if (!Dispatcher.CheckAccess())

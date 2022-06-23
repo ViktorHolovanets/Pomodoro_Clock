@@ -77,7 +77,7 @@
                             <RowDefinition/>
                         </Grid.RowDefinitions>
                         <GroupBox Grid.Row="0" Header="Заплановано">
-                            <ScrollViewer>
+                            <ScrollViewer x:Name="scrollViewer">
                                 <ListBox x:Name="lbPlannedPomodoro" Background="Transparent" SelectionChanged="lbPlannedPomodoro_SelectionChanged" 
                                          MouseDoubleClick="lbPlannedPomodoro_MouseDoubleClick">
                                     <ListBox.ItemTemplate>
