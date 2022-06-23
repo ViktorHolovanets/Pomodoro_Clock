@@ -70,8 +70,7 @@ namespace Pomodoro_Clock
 
         private void btnStartPomodoro_Click(object sender, RoutedEventArgs e)
         {
-            btnStartPomodoro.Content = "⏸️";
-            
+            btnStartPomodoro.IsEnabled=false;          
             btnSettings.IsEnabled = false;
             btnStopPomodoro.IsEnabled = true;
             IsRunPomodoro = true;
@@ -163,14 +162,25 @@ namespace Pomodoro_Clock
                 Dispatcher.Invoke(c);
             else c();
         }
-        
+        void AutoStart_Pause()
+        {
+            void c()
+            {
+                btnNextStartPomodoro.IsEnabled = true;
+            }
+            if (!Dispatcher.CheckAccess())
+                Dispatcher.Invoke(c);
+            else c();
+            MyResetEvent.WaitOne();
+        }
         private void RunPomodoro(Pomodoro tmp)
         {
             for (int i = 0; i < tmp.DailGoal; i++)
             {
+                
+                
+                if (!IsRunPomodoro) break;
                 MyResetEvent.WaitOne();
-                brdWorkAreaBackground("#FFE84E4E");
-                if (!IsRunPomodoro) break;                
                 StartTime(tmp.DurationPomodoro);
                 MyResetEvent.WaitOne();
                 if (!IsRunPomodoro) break;
@@ -178,14 +188,22 @@ namespace Pomodoro_Clock
                 {
                     ShowTime(tmp.LongPause);
                     brdWorkAreaBackground("#FF4EE8AC");
+                    if (workPomodoro.IsAutoPause)
+                        AutoStart_Pause();
                     StartTime(tmp.LongPause - 1);
                 }
                 else
                 {
                     ShowTime(tmp.ShortPause);
-                    StartTime(tmp.ShortPause - 1);
                     brdWorkAreaBackground("#FF4EC8E8");
+                    if (workPomodoro.IsAutoPause)
+                        AutoStart_Pause();
+                    StartTime(tmp.ShortPause - 1);            
                 }
+                brdWorkAreaBackground("#FFE84E4E");
+                ShowTime(tmp.DurationPomodoro);
+                if (workPomodoro.IsAutoStart)
+                    AutoStart_Pause();
             }
             void c2()
             {
@@ -208,7 +226,7 @@ namespace Pomodoro_Clock
         }
         void TheEndPomodoro()
         {
-            btnStartPomodoro.Content = "▶";
+            btnStartPomodoro.IsEnabled = true;
             btnSettings.IsEnabled = true;
             btnStopPomodoro.IsEnabled = false;
             IsRunPomodoro = false;
@@ -345,6 +363,12 @@ namespace Pomodoro_Clock
             p.ShowDialog();
             workPomodoro = p.PomodoroSettings;
             ShowTime(workPomodoro.DurationPomodoro);
+        }
+
+        private void btnNextStartPomodoro_Click(object sender, RoutedEventArgs e)
+        {
+            MyResetEvent.Set();
+            btnNextStartPomodoro.IsEnabled = false;
         }
     }
 }

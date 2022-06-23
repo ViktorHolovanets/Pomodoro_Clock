@@ -59,6 +59,7 @@
                         <TextBox x:Name="tbTime" Background="Transparent" HorizontalAlignment="Center" FontSize="85" BorderBrush="Transparent" IsReadOnly="True"></TextBox>
                         <WrapPanel HorizontalAlignment="Center">
                             <Button x:Name="btnStartPomodoro" FontSize="25" BorderThickness="0" Click="btnStartPomodoro_Click" Content="▶" ToolTip="Start"></Button>
+                            <Button x:Name="btnNextStartPomodoro" FontSize="25" BorderThickness="0" Click="btnNextStartPomodoro_Click" Content="⏭" IsEnabled="False"></Button>
                             <Button x:Name="btnStopPomodoro" FontSize="25" BorderThickness="0"  Click="btnStopPomodoro_Click" IsEnabled="false" ToolTip="Stop">⏹</Button>
                         </WrapPanel>
                     </StackPanel>
