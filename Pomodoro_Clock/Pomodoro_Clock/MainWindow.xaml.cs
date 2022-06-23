@@ -28,7 +28,7 @@ namespace Pomodoro_Clock
         TimeSpan MyTime;
         Pomodoro workPomodoro;
         bool IsRunPomodoro = false;
-        object obj = new object();
+        AutoResetEvent MyResetEvent;
         string connection;
         ObservableCollection<Pomodoro> PlannedPomodoroCollection;
         ObservableCollection<Pomodoro> CompletedPomodoroCollection;
@@ -40,6 +40,7 @@ namespace Pomodoro_Clock
         }
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            MyResetEvent = new AutoResetEvent(true);
             connection = MyFunction.StringConnection("DB/DbPomodoro.mdf");
             dapper = new DB.Dapper.Dapper(connection);
             PlannedPomodoroCollection = new ObservableCollection<Pomodoro>();
@@ -82,6 +83,7 @@ namespace Pomodoro_Clock
             tbTime.Text = MyTime.ToString(@"mm\:ss");
             if (MyTime == TimeSpan.Zero)
             {
+                MyResetEvent.Set();
                 MyTimer.Stop();
             }
             else if (MyTime == TimeSpan.FromSeconds(3))
@@ -154,9 +156,11 @@ namespace Pomodoro_Clock
         {
             for (int i = 0; i < tmp.DailGoal; i++)
             {
+                MyResetEvent.WaitOne();
+                brdWorkAreaBackground("#FFE84E4E");
                 if (!IsRunPomodoro) break;
                 StartTime(tmp.DurationPomodoro);
-                while (MyTimer.IsEnabled) { }
+                MyResetEvent.WaitOne();
                 if (!IsRunPomodoro) break;
                 if ((i + 1) % tmp.LongBreakDelay == 0)
                 {
@@ -168,8 +172,6 @@ namespace Pomodoro_Clock
                     StartTime(tmp.ShortPause - 1);
                     brdWorkAreaBackground("#FF4EC8E8");
                 }
-                while (MyTimer.IsEnabled) { }
-                brdWorkAreaBackground("#FFE84E4E");
             }
             void c2()
             {
