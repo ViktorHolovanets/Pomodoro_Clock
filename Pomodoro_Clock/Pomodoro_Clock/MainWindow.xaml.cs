@@ -278,7 +278,7 @@ namespace Pomodoro_Clock
                 return;
             }
             Pomodoro pomodoro = new Pomodoro();
-            pomodoro.Created = Calendar.SelectedDate.Value;
+            pomodoro.Created = Calendar.SelectedDate.Value.Date;
             pomodoro.Completed = false;
             pomodoro.NamePomodoro = tbPomodoroName.Text;
             pomodoro.DurationPomodoro = (int)(Double.Parse(tbDurationPomodoro.Text) * 60);
