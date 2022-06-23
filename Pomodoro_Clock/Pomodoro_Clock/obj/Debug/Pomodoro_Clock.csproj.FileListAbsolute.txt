@@ -34,3 +34,36 @@ F:\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\Pomodor
 F:\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\Pomodoro_Clock.pdb
 F:\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\bin\Debug\Dapper.dll
 F:\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\bin\Debug\Dapper.xml
+C:\Users\Onyshchenko Max\source\repos\Ivan7419\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\Pomodoro_Clock.csproj.AssemblyReference.cache
+C:\Users\Onyshchenko Max\source\repos\Ivan7419\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\Pomodoro_Clock.csproj.SuggestedBindingRedirects.cache
+C:\Users\Onyshchenko Max\source\repos\Ivan7419\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\DictionaryResources.baml
+C:\Users\Onyshchenko Max\source\repos\Ivan7419\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\Views\CustomBalloonUserControl.g.cs
+C:\Users\Onyshchenko Max\source\repos\Ivan7419\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\Views\SettingsPomodoro.g.cs
+C:\Users\Onyshchenko Max\source\repos\Ivan7419\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\App.g.cs
+C:\Users\Onyshchenko Max\source\repos\Ivan7419\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\Pomodoro_Clock_MarkupCompile.cache
+C:\Users\Onyshchenko Max\source\repos\Ivan7419\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\Pomodoro_Clock_MarkupCompile.lref
+C:\Users\Onyshchenko Max\source\repos\Ivan7419\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\Pomodoro_Clock.exe
+C:\Users\Onyshchenko Max\source\repos\Ivan7419\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\bin\Debug\Dapper.dll
+C:\Users\Onyshchenko Max\source\repos\Ivan7419\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\bin\Debug\EntityFramework.dll
+C:\Users\Onyshchenko Max\source\repos\Ivan7419\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Onyshchenko Max\source\repos\Ivan7419\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\bin\Debug\Hardcodet.NotifyIcon.Wpf.dll
+C:\Users\Onyshchenko Max\source\repos\Ivan7419\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\bin\Debug\LibraryFunction.dll
+C:\Users\Onyshchenko Max\source\repos\Ivan7419\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\bin\Debug\LibraryFunction.pdb
+C:\Users\Onyshchenko Max\source\repos\Ivan7419\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\bin\Debug\Dapper.xml
+C:\Users\Onyshchenko Max\source\repos\Ivan7419\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\bin\Debug\EntityFramework.xml
+C:\Users\Onyshchenko Max\source\repos\Ivan7419\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Onyshchenko Max\source\repos\Ivan7419\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\bin\Debug\Hardcodet.NotifyIcon.Wpf.xml
+C:\Users\Onyshchenko Max\source\repos\Ivan7419\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\MainWindow.g.cs
+C:\Users\Onyshchenko Max\source\repos\Ivan7419\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\App.baml
+C:\Users\Onyshchenko Max\source\repos\Ivan7419\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\MainWindow.baml
+C:\Users\Onyshchenko Max\source\repos\Ivan7419\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\Views\CustomBalloonUserControl.baml
+C:\Users\Onyshchenko Max\source\repos\Ivan7419\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\Views\SettingsPomodoro.baml
+C:\Users\Onyshchenko Max\source\repos\Ivan7419\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\Pomodoro_Clock.g.resources
+C:\Users\Onyshchenko Max\source\repos\Ivan7419\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\Pomodoro_Clock.Properties.Resources.resources
+C:\Users\Onyshchenko Max\source\repos\Ivan7419\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\Pomodoro_Clock.csproj.GenerateResource.cache
+C:\Users\Onyshchenko Max\source\repos\Ivan7419\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\Pomodoro_Clock.csproj.CoreCompileInputs.cache
+C:\Users\Onyshchenko Max\source\repos\Ivan7419\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\Pomodoro_Clock.csproj.CopyComplete
+C:\Users\Onyshchenko Max\source\repos\Ivan7419\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\obj\Debug\Pomodoro_Clock.pdb
+C:\Users\Onyshchenko Max\source\repos\Ivan7419\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\bin\Debug\Pomodoro_Clock.exe.config
+C:\Users\Onyshchenko Max\source\repos\Ivan7419\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\bin\Debug\Pomodoro_Clock.exe
+C:\Users\Onyshchenko Max\source\repos\Ivan7419\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\bin\Debug\Pomodoro_Clock.pdb
