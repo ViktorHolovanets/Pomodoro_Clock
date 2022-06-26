@@ -1,5 +1,5 @@
-﻿using System;
-
+using System;
+﻿
 namespace PomodoroRegister
 {
     public class ProgramScriptFille
@@ -12,7 +12,6 @@ namespace PomodoroRegister
         }
         public void Update()
         {
-            
             
         }
         public void Exit()

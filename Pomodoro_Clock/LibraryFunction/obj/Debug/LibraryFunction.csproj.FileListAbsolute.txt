@@ -10,3 +10,21 @@ D:\ProgramFilles\C#\Pomodoro\Pomodoro_Clock\LibraryFunction\obj\Debug\LibraryFun
 D:\ProgramFilles\C#\Pomodoro\Pomodoro_Clock\LibraryFunction\obj\Debug\LibraryFunction.csproj.CoreCompileInputs.cache
 D:\ProgramFilles\C#\Pomodoro\Pomodoro_Clock\LibraryFunction\obj\Debug\LibraryFunction.dll
 D:\ProgramFilles\C#\Pomodoro\Pomodoro_Clock\LibraryFunction\obj\Debug\LibraryFunction.pdb
+C:\Users\Onyshchenko Max\source\repos\Ivan7419\Pomodoro_Clock\Pomodoro_Clock\LibraryFunction\bin\Debug\LibraryFunction.dll
+C:\Users\Onyshchenko Max\source\repos\Ivan7419\Pomodoro_Clock\Pomodoro_Clock\LibraryFunction\bin\Debug\LibraryFunction.pdb
+C:\Users\Onyshchenko Max\source\repos\Ivan7419\Pomodoro_Clock\Pomodoro_Clock\LibraryFunction\obj\Debug\LibraryFunction.csproj.AssemblyReference.cache
+C:\Users\Onyshchenko Max\source\repos\Ivan7419\Pomodoro_Clock\Pomodoro_Clock\LibraryFunction\obj\Debug\LibraryFunction.csproj.CoreCompileInputs.cache
+C:\Users\Onyshchenko Max\source\repos\Ivan7419\Pomodoro_Clock\Pomodoro_Clock\LibraryFunction\obj\Debug\LibraryFunction.dll
+C:\Users\Onyshchenko Max\source\repos\Ivan7419\Pomodoro_Clock\Pomodoro_Clock\LibraryFunction\obj\Debug\LibraryFunction.pdb
+F:\Pomodoro\Pomodoro\Pomodoro_Clock\LibraryFunction\bin\Debug\LibraryFunction.dll
+F:\Pomodoro\Pomodoro\Pomodoro_Clock\LibraryFunction\bin\Debug\LibraryFunction.pdb
+F:\Pomodoro\Pomodoro\Pomodoro_Clock\LibraryFunction\obj\Debug\LibraryFunction.csproj.AssemblyReference.cache
+F:\Pomodoro\Pomodoro\Pomodoro_Clock\LibraryFunction\obj\Debug\LibraryFunction.csproj.CoreCompileInputs.cache
+F:\Pomodoro\Pomodoro\Pomodoro_Clock\LibraryFunction\obj\Debug\LibraryFunction.dll
+F:\Pomodoro\Pomodoro\Pomodoro_Clock\LibraryFunction\obj\Debug\LibraryFunction.pdb
+F:\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\LibraryFunction\bin\Debug\LibraryFunction.dll
+F:\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\LibraryFunction\bin\Debug\LibraryFunction.pdb
+F:\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\LibraryFunction\obj\Debug\LibraryFunction.csproj.AssemblyReference.cache
+F:\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\LibraryFunction\obj\Debug\LibraryFunction.csproj.CoreCompileInputs.cache
+F:\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\LibraryFunction\obj\Debug\LibraryFunction.dll
+F:\Pomodoro_Clock\Pomodoro_Clock\Pomodoro_Clock\LibraryFunction\obj\Debug\LibraryFunction.pdb
