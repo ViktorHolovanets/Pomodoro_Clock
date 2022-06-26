@@ -58,7 +58,6 @@
     <Compile Include="Rainbow\Lines.cs" />
     <Compile Include="Rainbow\Rainbow.cs" />
     <Compile Include="Subject\RegSubject.cs" />
-    <Compile Include="Subject\Path\pathSubject.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
