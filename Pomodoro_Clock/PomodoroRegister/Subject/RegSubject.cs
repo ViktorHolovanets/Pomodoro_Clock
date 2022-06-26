@@ -20,8 +20,6 @@ namespace PomodoroRegister
 
         private void CreateSubject()
         {
-
-
             if (key != null)
             {
                 key = Registry.CurrentUser.OpenSubKey(@"SOFTWARE\Pomodoro_Clock");
@@ -38,10 +36,34 @@ namespace PomodoroRegister
                 {
                     key = Registry.CurrentUser.CreateSubKey(@"Software\Pomodoro_Clock");
                     rainbow.LogTextPaint(ConsoleColor.DarkRed, ConsoleColor.DarkYellow, key);
-
                 }
             }
+        }
 
+        public void AddSubjectSett(string arg1, int arg2)
+        {
+            key.SetValue(arg1, arg2);
+            rainbow.LogTextPaint(ConsoleColor.DarkGreen, ConsoleColor.DarkYellow, key + " Create new Settings");
+        }
+        public void AddSubjectSett(string arg1, string arg2)
+        {
+            key.SetValue(arg1, arg2);
+            rainbow.LogTextPaint(ConsoleColor.DarkGreen, ConsoleColor.DarkYellow, key + " Create new Settings");
+        }
+        public void AddSubjectSett(string arg1, int arg2, RegistryValueKind registryValue)
+        {
+            key.SetValue(arg1, arg2, registryValue);
+            rainbow.LogTextPaint(ConsoleColor.DarkGreen, ConsoleColor.DarkYellow, key + " Create new Settings");
+        }
+        public void AddSubjectSett(string arg1, string arg2, RegistryValueKind registryValue)
+        {
+            key.SetValue(arg1, arg2, registryValue);
+            rainbow.LogTextPaint(ConsoleColor.DarkGreen, ConsoleColor.DarkYellow, key + " Create new Settings");
+        }
+
+        public void GetSubjectSett(string arg)
+        {
+            rainbow.LogTextPaint(ConsoleColor.Gray, ConsoleColor.White, key.GetValue(arg));
         }
 
         public void Exit()
